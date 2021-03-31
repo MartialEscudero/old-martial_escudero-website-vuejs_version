@@ -6,8 +6,8 @@ $(document).ready(function(){
   // Animation hamburger
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");
-    $("#nav-left").slideToggle(2000);
-    $("#nav-right").slideToggle(2000);
+    $("#nav-left").slideToggle(1500);
+    $("#nav-right").slideToggle(1500);
     $("#line1").toggleClass("bg-gray-900");
     $("#line2").toggleClass("bg-gray-900");
   });
@@ -19,5 +19,12 @@ $(document).ready(function(){
     $("#nav-left").slideToggle();
     $("#nav-right").slideToggle();
   });
+
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() >= 200) {
+        $('#footer-scroll').addClass('hidden');
+    }
+})
   
 });

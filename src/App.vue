@@ -53,6 +53,13 @@
       </div>
     </div>
     <router-view/>
+    <div id="footer-scroll">
+      <div class="scroll-downs">
+        <div class="mousey">
+          <div class="scroller"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -79,9 +86,6 @@ export default {
         return false
       }
     }
-  },
-  mounted() {
-    console.log()
   }
 }
 </script>
@@ -90,8 +94,11 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
 
+* {
+  font-family: 'Poppins';
+}
+
 body {
-  font-family: 'Red Hat Display';
   background-color: #0e0e0e;
   color: white;
   /* cursor: none; */
@@ -101,10 +108,6 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
-}
-
-.bg-0e0e0e {
-  background: #0e0e0e;
 }
 
 .transparent {
@@ -208,7 +211,7 @@ body::-webkit-scrollbar {
 }
 
 .title-nav {
-  margin: 1.5rem 0 1.5rem 0;
+  margin: 2rem 0 2rem 0;
   max-width: 75vw;
 }
 
@@ -224,6 +227,48 @@ body::-webkit-scrollbar {
   background-size: 100%;
 }
 
+#footer-scroll {
+  position: fixed;
+  bottom: 3rem;
+  right: 50%;
+}
+
+.scroll-downs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  
+  width :34px;
+  height: 55px;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: white;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
 @media screen and (max-width: 640px) {
   #nav-left {
     color: #0e0e0e;
@@ -235,6 +280,10 @@ body::-webkit-scrollbar {
 
   .btn-nav {
     background-image: linear-gradient(transparent calc(65% - 5px), #D1D5DB 5px);
+  }
+
+  #footer-scroll {
+    display: none;
   }
 }
 
