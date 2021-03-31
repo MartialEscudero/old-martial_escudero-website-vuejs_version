@@ -3,7 +3,7 @@
     <div id="nav" class="transparent">
       <div class="transparent flex flex-no-shrink items-stretch h-12">
         <router-link to="/">
-          <img src="./assets/img/icon.png">
+          <img class="lg:w-20 md:w-20 w-12" src="./assets/img/icon.png">
         </router-link>
       </div>
       <div class="transparent flex items-stretch flex-no-shrink flex-grow">
@@ -51,7 +51,6 @@
 
 #nav img {
   margin: 50px 0 0 50px;
-  width: 80px;
   user-select: none;  
 }
 
