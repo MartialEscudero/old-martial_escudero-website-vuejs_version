@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center" style="margin-top: 50rem">
+  <div class="text-center text-red-500" style=" margin-top: 50rem">
     Martial Escudero
   </div>
 </template>
