@@ -2,7 +2,7 @@
   <div>
     <div id="nav-left" class="hidden">
       <div class="flex h-screen">
-        <div class="m-auto text-4xl">
+        <div class="m-auto text-4xl font-bold">
           <div class="title-nav">
             <a class="btn-nav" v-on:mouseover="select = 'home'"><router-link to="/">Home</router-link></a>
           </div>
@@ -88,9 +88,10 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900&display=swap');
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Red Hat Display';
   background-color: #0e0e0e;
   color: white;
   /* cursor: none; */
@@ -207,12 +208,20 @@ body::-webkit-scrollbar {
 }
 
 .title-nav {
-  margin: 1rem 0 1rem 0;
+  margin: 1.5rem 0 1.5rem 0;
+  max-width: 75vw;
 }
 
-.title-nav:hover {
-  transition: .5s;
-  color: gray;
+.btn-nav {
+  background-image: linear-gradient(transparent calc(65% - 5px), #525252 5px);
+  background-size: 0;
+  background-repeat: no-repeat;
+  display: inline;
+  transition: 0.5s ease;
+}
+
+.title-nav:hover .btn-nav {
+  background-size: 100%;
 }
 
 @media screen and (max-width: 640px) {
@@ -222,6 +231,10 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
     z-index: 0;
+  }
+
+  .btn-nav {
+    background-image: linear-gradient(transparent calc(65% - 5px), #D1D5DB 5px);
   }
 }
 
