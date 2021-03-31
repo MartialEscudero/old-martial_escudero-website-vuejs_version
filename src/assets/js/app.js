@@ -12,7 +12,7 @@ $(document).ready(function(){
     $("#line2").toggleClass("bg-gray-900");
   });
 
-  $("#btn-nav").click(function(){
+  $(".btn-nav").click(function(){
     $(".hamburger").toggleClass("is-active");
     $("#line1").toggleClass("bg-gray-900");
     $("#line2").toggleClass("bg-gray-900")

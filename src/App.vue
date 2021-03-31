@@ -1,35 +1,38 @@
 <template>
   <div>
     <div id="nav-left" class="hidden">
-      <div id="btn-nav">
-        <div class="flex h-screen">
-          <div class="m-auto text-4xl">
-            <div class="title-nav">
-              <router-link to="/">Home</router-link>
-            </div>
-            <div class="title-nav">
-              <router-link to="/about">Services</router-link>
-            </div>
-            <div class="title-nav">
-              <router-link to="/">À Propos</router-link>
-            </div>
-            <div class="title-nav">
-              <router-link to="/">Portfolio</router-link>
-            </div>
-            <div class="title-nav">
-              <router-link to="/">Contact</router-link>
-            </div>
-            <div class="title-nav">
-              <router-link to="/">Le Labo</router-link>
-            </div>
+      <div class="flex h-screen">
+        <div class="m-auto text-4xl">
+          <div class="title-nav">
+            <a class="btn-nav" v-on:mouseover="select = 'home'"><router-link to="/">Home</router-link></a>
+          </div>
+          <div class="title-nav">
+            <a class="btn-nav" v-on:mouseover="select = 'about'"><router-link to="/">À Propos</router-link></a>
+          </div>
+          <div class="title-nav">
+            <a class="btn-nav" v-on:mouseover="select = 'service'"><router-link to="/about" v-on:mouseover="select = 'about'">Services</router-link></a>
+          </div>
+          <div class="title-nav">
+            <a class="btn-nav" v-on:mouseover="select = 'portfolio'"><router-link to="/">Portfolio</router-link></a>
+          </div>
+          <div class="title-nav">
+            <a class="btn-nav" v-on:mouseover="select = 'labo'"><router-link to="/">Le Labo</router-link></a>
+          </div>
+          <div class="title-nav">
+            <a class="btn-nav" v-on:mouseover="select = 'contact'"><router-link to="/">Contact</router-link></a>
           </div>
         </div>
       </div>
     </div>
-    <div id="nav-right" class="hidden">
+    <div id="nav-right" class="hidden" v-if="!isMobile()">
       <div class="bg-white flex h-screen">
         <div class="bg-white m-auto text-md">
-          <p>{{text.bio}}</p>
+          <p v-if="select == 'home'">{{text.home}}</p>
+          <p v-if="select == 'service'">{{text.service}}</p>
+          <p v-if="select == 'about'">{{text.about}}</p>
+          <p v-if="select == 'portfolio'">{{text.portfolio}}</p>
+          <p v-if="select == 'contact'">{{text.contact}}</p>
+          <p v-if="select == 'labo'">{{text.labo}}</p>
         </div>
       </div>
     </div>
@@ -58,17 +61,35 @@ require("./assets/js/app.js")
 
 export default {
   data: () => ({
+    select: 'home',
     text: {
-      bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      home: 'texte home',
+      service: 'texte service',
+      about: 'texte à propos',
+      portfolio: 'texte portfolio',
+      contact: 'texte contact',
+      labo: 'texte labo',
     }
   }),
+  methods: {
+    isMobile() {
+      if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    }
+  },
+  mounted() {
+    console.log()
+  }
 }
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
 
-* {
+body {
   font-family: 'Poppins', sans-serif;
   background-color: #0e0e0e;
   color: white;
@@ -77,7 +98,7 @@ export default {
   scrollbar-width: none; 
 }
 
-*::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
 
@@ -193,4 +214,15 @@ export default {
   transition: .5s;
   color: gray;
 }
+
+@media screen and (max-width: 640px) {
+  #nav-left {
+    color: #0e0e0e;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+}
+
 </style>
