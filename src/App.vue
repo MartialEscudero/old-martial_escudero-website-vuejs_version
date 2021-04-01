@@ -286,5 +286,4 @@ body::-webkit-scrollbar {
     display: none;
   }
 }
-
 </style>

@@ -27,18 +27,6 @@
 
 <script>
 require("../../assets/js/letter.js")
-
-export default {
-  methods: {
-    isMobile() {
-      if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        return true
-      } else {
-        return false
-      }
-    }
-  }
-}
 </script>
 
 <style scoped>

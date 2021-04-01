@@ -7,6 +7,7 @@
       <div class="mx-auto text-justify xl:m-0 sm:ml-5 sm:mr-5">
         <p class="text-3xl font-bold mt-10">Martial <span>Escudero</span></p>
         <p class="text-2xl ">{{age}} ans</p>
+        <router-link class="btn text-white font-bold py-2 px-4 rounded-full mt-14" tag="button" to="/cv">Voir mon CV</router-link>
         <p class="mt-14">
           Actuellement en <a class="lien" target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges, je suis diplômé d'un <a class="lien" target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur</a>.<br>
           Vous pouvez trouver certains de mes projets sous l'entité <a class="lien" target="_blank" href="https://www.behance.net/pureproduction/">"Pure. Production"</a>.
@@ -14,25 +15,45 @@
         <p class="mt-14">
           Passionné et autodidacte depuis toujours, je saurais m'investir et vous accompagnez dans vos projets.
         </p>
-        <div class="flex mt-14">
+        <div id="social" class="flex mt-16">
           <div class="xl:mr-7">
-            <a class="flex-initial" href="https://www.linkedin.com/in/martial-escudero/" target="_blank"><img class="social" src="../../assets/img/linkedin.svg" /></a>
+            <a class="flex-auto" href="https://www.linkedin.com/in/martial-escudero/" target="_blank">
+                <svg class="svg-icon" viewBox="0 0 23.273 23.273">
+                  <path d="M11.637,0A11.637,11.637,0,1,0,23.273,11.637,11.638,11.638,0,0,0,11.637,0ZM8.255,17.591H5.421V9.065H8.255ZM6.838,7.9H6.82a1.477,1.477,0,1,1,.037-2.946A1.478,1.478,0,1,1,6.838,7.9Zm11.636,9.691H15.641V13.03c0-1.146-.41-1.928-1.436-1.928a1.551,1.551,0,0,0-1.454,1.036,1.941,1.941,0,0,0-.093.692v4.762H9.824s.037-7.726,0-8.526h2.834v1.207a2.814,2.814,0,0,1,2.554-1.407c1.865,0,3.263,1.219,3.263,3.837Zm0,0" />
+                </svg>
+            </a>
           </div>
           <div class="xl:mr-7">
-            <a class="flex-initial" href="https://github.com/MartialEscudero" target="_blank"><img class="social" src="../../assets/img/github.svg" /></a>
+            <a class="flex-auto" href="https://github.com/MartialEscudero" target="_blank">
+              <svg class="svg-icon" viewBox="0 0 24 23">
+                <path d="M12,.5A11.9,11.9,0,0,0,0,12.292,11.812,11.812,0,0,0,8.2,23.48c.6.111.82-.254.82-.567,0-.28-.01-1.022-.015-2-3.338.711-4.042-1.582-4.042-1.582A3.143,3.143,0,0,0,3.633,17.6c-1.087-.731.084-.716.084-.716A2.51,2.51,0,0,1,5.555,18.1a2.584,2.584,0,0,0,3.495.981A2.5,2.5,0,0,1,9.81,17.5c-2.665-.3-5.466-1.309-5.466-5.827A4.505,4.505,0,0,1,5.579,8.513a4.126,4.126,0,0,1,.105-3.121s1.005-.316,3.3,1.209a11.506,11.506,0,0,1,6,0c2.28-1.525,3.285-1.209,3.285-1.209a4.24,4.24,0,0,1,.12,3.121,4.523,4.523,0,0,1,1.23,3.164c0,4.53-2.805,5.527-5.475,5.817a2.8,2.8,0,0,1,.81,2.182c0,1.578-.015,2.846-.015,3.229,0,.309.21.678.825.56A11.776,11.776,0,0,0,24,12.292,11.9,11.9,0,0,0,12,.5Z" />
+              </svg>
+            </a>
           </div>
           <div class="xl:mr-7">
-            <a class="flex-initial" href="https://www.behance.net/pureproduction/" target="_blank"><img class="social" src="../../assets/img/behance.svg" /></a>
+            <a class="flex-auto" href="https://www.behance.net/pureproduction/" target="_blank">
+              <svg class="svg-icon" viewBox="0 0 23.001 23.002">
+                <path d="M-2357.935-8738a11.511,11.511,0,0,1-11.5-11.5,11.515,11.515,0,0,1,11.5-11.5,11.518,11.518,0,0,1,11.5,11.5,11.416,11.416,0,0,1-3.37,8.131A11.43,11.43,0,0,1-2357.935-8738Zm4.123-13.5a3.052,3.052,0,0,0-2.906,1.658,4.171,4.171,0,0,0-.419,1.668,3.505,3.505,0,0,0,.822,2.391,3.27,3.27,0,0,0,2.5.926h.112a4.048,4.048,0,0,0,1.633-.334,2.024,2.024,0,0,0,1.223-1.975h-1.523a.819.819,0,0,1-.228.553,1.539,1.539,0,0,1-1.164.379s-.021,0-.057,0a1.688,1.688,0,0,1-.837-.221,1.38,1.38,0,0,1-.63-1.285h4.485a4.115,4.115,0,0,0-.745-2.871A2.868,2.868,0,0,0-2353.812-8751.5Zm-10.924-2.2h0v8.662h4.532a2.551,2.551,0,0,0,2.724-2.561,2.644,2.644,0,0,0-.533-1.719,1.436,1.436,0,0,0-1.089-.432,1.494,1.494,0,0,0,1.319-1.641,2.21,2.21,0,0,0-2.447-2.311Zm9.063.51h0v1.068h3.575v-1.068Zm-4.684,6.615h-2.395v-2.316h2.521a.921.921,0,0,1,.6.262,1.255,1.255,0,0,1,.308.926C-2359.32-8746.982-2359.678-8746.592-2360.356-8746.582Zm7.9-2.316h-2.836a1.549,1.549,0,0,1,1.518-1.332,1.265,1.265,0,0,1,.943.35,1.509,1.509,0,0,1,.375.98Zm-7.928-1.332h-2.362v-1.939h2.521c.006,0,.613.012.613.9C-2359.616-8750.357-2359.988-8750.23-2360.388-8750.23Z" transform="translate(2369.432 8761)" />
+              </svg>
+            </a>
           </div>
           <div class="xl:mr-7">
-            <a class="flex-initial" href="https://www.youtube.com/channel/UC_d6_vk36G1fty7Xa-gvz_A" target="_blank"><img class="social" src="../../assets/img/youtube.svg" /></a>
+            <a class="flex-auto" href="https://www.youtube.com/channel/UC_d6_vk36G1fty7Xa-gvz_A" target="_blank">
+              <svg class="svg-icon" viewBox="0 0 24 24">
+                <path d="M14.829 6.302c-.738-.034-.96-.04-2.829-.04s-2.09.007-2.828.04c-1.899.087-2.783.986-2.87 2.87-.033.738-.041.959-.041 2.828s.008 2.09.041 2.829c.087 1.879.967 2.783 2.87 2.87.737.033.959.041 2.828.041 1.87 0 2.091-.007 2.829-.041 1.899-.086 2.782-.988 2.87-2.87.033-.738.04-.96.04-2.829s-.007-2.09-.04-2.828c-.088-1.883-.973-2.783-2.87-2.87zm-2.829 9.293c-1.985 0-3.595-1.609-3.595-3.595 0-1.985 1.61-3.594 3.595-3.594s3.595 1.609 3.595 3.594c0 1.985-1.61 3.595-3.595 3.595zm3.737-6.491c-.464 0-.84-.376-.84-.84 0-.464.376-.84.84-.84.464 0 .84.376.84.84 0 .463-.376.84-.84.84zm-1.404 2.896c0 1.289-1.045 2.333-2.333 2.333s-2.333-1.044-2.333-2.333c0-1.289 1.045-2.333 2.333-2.333s2.333 1.044 2.333 2.333zm-2.333-12c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.958 14.886c-.115 2.545-1.532 3.955-4.071 4.072-.747.034-.986.042-2.887.042s-2.139-.008-2.886-.042c-2.544-.117-3.955-1.529-4.072-4.072-.034-.746-.042-.985-.042-2.886 0-1.901.008-2.139.042-2.886.117-2.544 1.529-3.955 4.072-4.071.747-.035.985-.043 2.886-.043s2.14.008 2.887.043c2.545.117 3.957 1.532 4.071 4.071.034.747.042.985.042 2.886 0 1.901-.008 2.14-.042 2.886z" />
+              </svg>
+            </a>
           </div>
           <div class="xl:mr-7">
-            <a class="flex-initial" href="https://www.instagram.com/pure.laprod/" target="_blank"><img class="social" src="../../assets/img/instagram.svg" /></a>
+            <a class="flex-auto" href="https://www.instagram.com/pure.laprod/" target="_blank">
+              <svg class="svg-icon" viewBox="0 0 24 24">
+                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.441 16.892c-2.102.144-6.784.144-8.883 0-2.276-.156-2.541-1.27-2.558-4.892.017-3.629.285-4.736 2.558-4.892 2.099-.144 6.782-.144 8.883 0 2.277.156 2.541 1.27 2.559 4.892-.018 3.629-.285 4.736-2.559 4.892zm-6.441-7.234l4.917 2.338-4.917 2.346v-4.684z" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
-      <div class="mx-auto mt-24 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden">
+      <div class="mx-auto mt-32 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden">
         <img class="lg:w-50" src="../../assets/img/icon.png">
       </div>
     </div>
@@ -67,15 +88,25 @@ export default {
   background: #93C5FD;
   color: #0e0e0e;
 }
-.social {
-  width: 50px;
-  height: 50px;
-  padding-left: 10px;
-  padding-right: 10px;
+
+#social svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  fill: white;
+}
+#social svg:hover {
+  transition: .5s;
+  fill: #3B82F6;
 }
 
-.social:hover {
-  transition: .5s;
-  background-color: #3B82F6;
+.btn {
+  background: #202020;
+  color: #93C5FD;
+}
+
+.btn:hover {
+  color: #202020;
+  background: #93C5FD;
 }
 </style>
