@@ -77,6 +77,10 @@ export default {
   color: #93C5FD;
 }
 
+.btn:focus {
+  outline: unset;
+}
+
 .btn {
   transition: .5s;
   color: #202020;

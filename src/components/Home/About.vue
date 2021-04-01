@@ -106,6 +106,10 @@ export default {
   color: #93C5FD;
 }
 
+.btn:focus {
+  outline: unset;
+}
+
 .btn {
   color: #202020;
   background: #93C5FD;
