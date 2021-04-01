@@ -5,7 +5,7 @@
     </div>
     <div class="container mx-auto grid xl:grid-cols-2 lg:grid-cols-1 gap-x-0 gap-y-24 mt-32">
       <div class="mx-auto card">
-        <router-link to="/">
+        <router-link to="/projet?id=123456789">
           <img class="img-fluid" src="../../assets/img/RFC.png">
           <div class="p-5">
             <p class="xl:text-2xl sm:text-l mt-1">Site martialescudero.com</p>
