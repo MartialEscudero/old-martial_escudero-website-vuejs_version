@@ -7,13 +7,10 @@
             <a class="btn-nav" v-on:mouseover="select = 'home'"><router-link to="/">Home</router-link></a>
           </div>
           <div class="title-nav">
-            <a class="btn-nav" v-on:mouseover="select = 'about'"><router-link to="/">À Propos</router-link></a>
+            <a class="btn-nav" v-on:mouseover="select = 'about'"><router-link to="/cv">À Propos</router-link></a>
           </div>
           <div class="title-nav">
-            <a class="btn-nav" v-on:mouseover="select = 'service'"><router-link to="/about" v-on:mouseover="select = 'about'">Services</router-link></a>
-          </div>
-          <div class="title-nav">
-            <a class="btn-nav" v-on:mouseover="select = 'portfolio'"><router-link to="/">Portfolio</router-link></a>
+            <a class="btn-nav" v-on:mouseover="select = 'portfolio'"><router-link to="/portfolio">Portfolio</router-link></a>
           </div>
           <div class="title-nav">
             <a class="btn-nav" v-on:mouseover="select = 'labo'"><router-link to="/">Le Labo</router-link></a>
@@ -24,9 +21,9 @@
         </div>
       </div>
     </div>
-    <div id="nav-right" class="hidden" v-if="!isMobile()">
-      <div class="bg-white flex h-screen">
-        <div class="bg-white m-auto text-md">
+    <div id="nav-right" class="hidden">
+      <div class="flex h-screen">
+        <div class="m-auto text-md">
           <p v-if="select == 'home'">{{text.home}}</p>
           <p v-if="select == 'service'">{{text.service}}</p>
           <p v-if="select == 'about'">{{text.about}}</p>
@@ -45,22 +42,22 @@
       <div class="transparent flex items-stretch flex-no-shrink flex-grow">
         <div class="transparent flex items-stretch justify-end ml-auto">
           <div class="transparent hamburger" id="hamburger">
-            <span id="line1" class="bg-white line"></span>
+            <span id="line1" class="line line-white"></span>
             <span class="bg-white line"></span>
-            <span id="line2" class="bg-white line"></span>
+            <span id="line2" class="line line-white"></span>
           </div>
         </div>
       </div>
     </div>
     <router-view/>
-    <div id="footer-scroll">
+    <div v-if="getUrl() == 'com/' || getUrl() == '080/'" id="footer-scroll">
       <div class="scroll-downs">
         <div class="mousey">
           <div class="scroller"></div>
         </div>
       </div>
     </div>
-    <footer class="mt-32 mb-4">
+    <footer v-if="getUrl() == 'com/' || getUrl() == '080/'" class="mb-4">
       <div class="text-center text-xs">
         &copy; 2020 - {{date}} Martial Escudero. Tous droits réservés.
       </div>
@@ -85,19 +82,16 @@ export default {
     }
   }),
   methods: {
-    getDate(){
+    getDate() {
       return new Date().getFullYear()
     },
-    isMobile() {
-      if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        return true
-      } else {
-        return false
-      }
+    getUrl(){
+      return window.location.href.substring(window.location.href.length-4)
     }
   },
   mounted() {
     this.date = this.getDate()
+    window.scroll(0, 0)
   }
 }
 </script>
@@ -148,7 +142,15 @@ body::-webkit-scrollbar {
   margin-right: 50px;
 }
 
-.hamburger .line{
+.line-black {
+  background: #0e0e0e;
+}
+
+.line-white {
+  background: white;
+}
+
+.hamburger .line {
   width: 40px;
   height: 2px;
   display: block;
@@ -245,7 +247,7 @@ body::-webkit-scrollbar {
 }
 
 #footer-scroll {
-  position: fixed;
+  position: absolute;
   bottom: 3rem;
   right: 50%;
 }
@@ -293,6 +295,10 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 100%;
     z-index: 0;
+  }
+
+  #nav-right {
+    visibility: hidden;
   }
 
   .btn-nav {

@@ -9,8 +9,8 @@
         <p class="text-2xl ">{{age}} ans</p>
         <router-link class="btn text-white font-bold py-2 px-4 rounded-full mt-14" tag="button" to="/cv">Voir mon CV</router-link>
         <p class="mt-14">
-          Actuellement en <a class="lien" target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges, je suis diplômé d'un <a class="lien" target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur</a>.<br>
-          Vous pouvez trouver certains de mes projets sous l'entité <a class="lien" target="_blank" href="https://www.behance.net/pureproduction/">"Pure. Production"</a>.
+          Actuellement en <a target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges, je suis diplômé d'un <a target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur</a>.<br>
+          Vous pouvez trouver certains de mes projets sous l'entité <a target="_blank" href="https://www.behance.net/pureproduction/">"Pure. Production"</a>.
         </p>
         <p class="mt-14">
           Passionné et autodidacte depuis toujours, je saurais m'investir et vous accompagnez dans vos projets.
@@ -79,11 +79,11 @@ export default {
 </script>
 
 <style scoped>
-.lien {
+a {
   color: #93C5FD;
 }
 
-.lien:hover {
+a:hover {
   transition: .5s;
   background: #93C5FD;
   color: #0e0e0e;

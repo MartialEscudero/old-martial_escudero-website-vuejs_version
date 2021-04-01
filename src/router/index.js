@@ -16,14 +16,23 @@ const routes = [
     component: () => import('../views/CV.vue')
   },
   {
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: () => import('../views/Portfolio.vue')
+  },
+  {
     path: '/projet',
     name: 'projet',
     component: () => import('../views/Projet.vue')
+  },
+  { 
+    path: '*', 
+    component: Home 
   }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes
 })
