@@ -13,10 +13,10 @@
             <a class="btn-nav" v-on:mouseover="select = 'portfolio'"><router-link to="/portfolio">Portfolio</router-link></a>
           </div>
           <div class="title-nav">
-            <a class="btn-nav" v-on:mouseover="select = 'labo'"><router-link to="/">Le Labo</router-link></a>
+            <a class="btn-nav" v-on:mouseover="select = 'labo'"><router-link to="/labo">Le Labo</router-link></a>
           </div>
           <div class="title-nav">
-            <a class="btn-nav" v-on:mouseover="select = 'contact'"><router-link to="/">Contact</router-link></a>
+            <a class="btn-nav" v-on:mouseover="select = 'contact'"><router-link to="/contact">Contact</router-link></a>
           </div>
         </div>
       </div>
@@ -50,14 +50,14 @@
       </div>
     </div>
     <router-view/>
-    <div v-if="getUrl() == 'com/' || getUrl() == '080/'" id="footer-scroll">
+    <div v-if="getUrl() == '/#/'" id="footer-scroll">
       <div class="scroll-downs">
         <div class="mousey">
           <div class="scroller"></div>
         </div>
       </div>
     </div>
-    <footer v-if="getUrl() == 'com/' || getUrl() == '080/'" class="mb-4">
+    <footer v-if="getUrl() == '/#/'" class="mb-4">
       <div class="text-center text-xs">
         &copy; 2020 - {{date}} Martial Escudero. Tous droits réservés.
       </div>
@@ -86,7 +86,7 @@ export default {
       return new Date().getFullYear()
     },
     getUrl(){
-      return window.location.href.substring(window.location.href.length-4)
+      return window.location.href.substring(window.location.href.length-3)
     }
   },
   mounted() {
@@ -289,6 +289,7 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 640px) {
+  
   #nav-left {
     color: #0e0e0e;
     background-color: white;
