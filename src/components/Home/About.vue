@@ -100,12 +100,13 @@ export default {
   fill: #3B82F6;
 }
 
-.btn {
+.btn:hover {
+  transition: .5s;
   background: #202020;
   color: #93C5FD;
 }
 
-.btn:hover {
+.btn {
   color: #202020;
   background: #93C5FD;
 }

@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-32 h-screen">
-    <div class="container mx-auto lg:text-left sm:text-center text-5xl mb-16">
+  <div class="xl:mt-32 sm:mt-60">
+    <div class="container mx-auto lg:text-left sm:text-center text-5xl mb-20">
       Derniers projets
     </div>
     <div class="container mx-auto grid xl:grid-cols-2 lg:grid-cols-1 gap-x-0 gap-y-24 mt-32">
@@ -41,8 +41,9 @@
         </router-link>
       </div>
     </div>
-    <div class="grid grid-cols-1 mt-24">
+    <div class="grid grid-cols-1 mt-28">
       <div class="mx-auto">
+        <p class="text-center text-sm mb-4 opacity-50">et plus ...</p>
         <router-link class="btn text-white font-bold py-2 px-4 rounded-full" tag="button" to="/portfolio">Découvrir tous mes projets</router-link>
       </div>
     </div>
@@ -71,20 +72,15 @@ export default {
   /* border-radius: 20px; */
 }
 
-.btn {
+.btn:hover {
   background: #202020;
   color: #93C5FD;
 }
 
-.btn:hover {
+.btn {
+  transition: .5s;
   color: #202020;
   background: #93C5FD;
-}
-
-.see:hover {
-  transition: .5s;
-  color: #93C5FD;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 640px) {

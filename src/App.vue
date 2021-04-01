@@ -38,9 +38,9 @@
     </div>
     <div id="nav" class="transparent">
       <div class="transparent flex flex-no-shrink items-stretch h-12">
-        <router-link to="/">
-          <img class="lg:w-20 md:w-20 w-12" src="./assets/img/icon.png">
-        </router-link>
+        <a href="/">
+          <img class="lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
+        </a>
       </div>
       <div class="transparent flex items-stretch flex-no-shrink flex-grow">
         <div class="transparent flex items-stretch justify-end ml-auto">
@@ -60,6 +60,11 @@
         </div>
       </div>
     </div>
+    <footer class="mt-32 mb-4">
+      <div class="text-center text-xs">
+        &copy; 2020 - {{date}} Martial Escudero. Tous droits réservés.
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -68,6 +73,7 @@ require("./assets/js/app.js")
 
 export default {
   data: () => ({
+    date: null,
     select: 'home',
     text: {
       home: 'texte home',
@@ -79,6 +85,9 @@ export default {
     }
   }),
   methods: {
+    getDate(){
+      return new Date().getFullYear()
+    },
     isMobile() {
       if (/Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         return true
@@ -86,6 +95,9 @@ export default {
         return false
       }
     }
+  },
+  mounted() {
+    this.date = this.getDate()
   }
 }
 </script>
@@ -96,6 +108,11 @@ export default {
 
 * {
   font-family: 'Poppins';
+}
+
+*::selection{
+  background-color: #93C5FD;
+  color: white;
 }
 
 body {
@@ -285,5 +302,15 @@ body::-webkit-scrollbar {
   #footer-scroll {
     display: none;
   }
+
+  #nav img {
+    margin: 30px 0 0 30px;
+  }
+
+  #hamburger {
+    margin-right: 30px;
+    margin-top: -20px;
+  }
+
 }
 </style>

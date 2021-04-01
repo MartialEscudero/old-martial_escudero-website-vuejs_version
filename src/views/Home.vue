@@ -3,6 +3,7 @@
     <Welcome />
     <About />
     <Projects />
+    <Contactme />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Welcome from '@/components/Home/Welcome.vue'
 import About from '@/components/Home/About.vue'
 import Projects from '@/components/Home/Projects.vue'
+import Contactme from '@/components/Home/Contactme.vue'
 
 export default {
   name: 'Home',
@@ -17,6 +19,7 @@ export default {
     Welcome,
     About,
     Projects,
+    Contactme,
   }
 }
 </script>
