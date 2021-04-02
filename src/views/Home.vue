@@ -14,6 +14,11 @@ import Projects from '@/components/Home/Projects.vue'
 import Contactme from '@/components/Home/Contactme.vue'
 
 export default {
+  metaInfo () {
+    return {
+      title : 'Martial Escudero | Étudiant - Développeur Web',
+    }
+  },
   name: 'Home',
   components: {
     Welcome,

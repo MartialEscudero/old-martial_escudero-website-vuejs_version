@@ -34,7 +34,11 @@
 
 <script>
 export default {
-
+metaInfo () {
+    return {
+      title : 'Martial Escudero | Le Labo',
+    }
+  },
 }
 </script>
 

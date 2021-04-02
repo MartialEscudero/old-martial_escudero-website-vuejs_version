@@ -46,6 +46,11 @@
 
 <script>
 export default {
+  metaInfo () {
+    return {
+      title : 'Martial Escudero | Mon Portfolio',
+    }
+  },
   mounted() {
     window.scroll(0, 0)
   }

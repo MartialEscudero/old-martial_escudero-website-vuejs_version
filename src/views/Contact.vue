@@ -79,6 +79,11 @@ window.$ = $;
 import emailjs from 'emailjs-com';
 
 export default {
+  metaInfo () {
+    return {
+      title : 'Martial Escudero | Contact',
+    }
+  },
   data: () => ({
     uuid: null,
     displayForm: true,

@@ -8,6 +8,11 @@
 
 <script>
 export default {
+  metaInfo () {
+    return {
+      title : 'Martial Escudero | Mon CV',
+    }
+  },
 
 }
 </script>

@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './assets/tailwind.css'
+import VueMeta from 'vue-meta'
+
+Vue.use(VueMeta)
+
 import{ init } from 'emailjs-com';
 
 init("user_PFnEAgnCIgPitvseq0QYE");

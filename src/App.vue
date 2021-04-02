@@ -70,13 +70,18 @@
 require("./assets/js/app.js")
 
 export default {
+  metaInfo () {
+    return {
+      title : 'Martial Escudero | Étudiant - Développeur Web',
+    }
+  },
   data: () => ({
     date: null,
     select: 'base',
     text: {
       home: "Home, ici ça veut dire accueil en anglais. Du coup, c'est la page d'accueil.",
       about: "Si vous avez des questions sur mon profil ou mon parcours vous trouverez ici toutes les réponses.",
-      portfolio: "Sur mon Porfolio, vous retrouvez différents projets que j'ai pu réaliser dans le domaine du Développement Web, Graphisme ou encore Audiovisuel.",
+      portfolio: "Sur mon Porfolio, vous retrouvez différents projets que j'ai pu réaliser dans le domaine du Développement Web, du Graphisme ou encore de l'Audiovisuel.",
       contact: "Si vous avez une question, un projet ou autre, vous pouvez compléter ce formulaire de contact (allez le voir il est tout beau) ou contactez moi à l'adresse suivante : contact@martialescudero.com",
       labo: "Le Labo est un espace de mon site où on y retrouve différents mini-projets de développement web et web design que je vous invite à découvrir.",
     }

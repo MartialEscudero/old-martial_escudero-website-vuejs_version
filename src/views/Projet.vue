@@ -29,6 +29,11 @@
 
 <script>
 export default {
+  metaInfo () {
+    return {
+      title : 'Martial Escudero | Site martialescudero.com',
+    }
+  },
   data: () => ({
     id: null,
   }),
