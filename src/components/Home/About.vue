@@ -1,12 +1,12 @@
 <template>
   <div class="mt-32 h-screen">
-    <div class="container mx-auto lg:text-left sm:text-center text-5xl mb-16">
+    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-16">
       À Propos
-    </div>
+    </h1>
     <div class="container mx-auto grid xl:grid-cols-2 lg:grid-cols-1 gap-4 mt-32">
       <div class="mx-auto text-justify xl:m-0 sm:ml-5 sm:mr-5">
-        <p class="text-3xl font-bold mt-10">Martial <span>Escudero</span></p>
-        <p class="text-2xl ">{{age}} ans</p>
+        <h2 class="text-3xl font-bold mt-10">Martial <span>Escudero</span></h2>
+        <h3 class="text-2xl ">{{age}} ans</h3>
         <router-link class="btn text-white font-bold py-2 px-4 rounded-full mt-14" tag="button" to="/cv">Voir mon CV</router-link>
         <p class="mt-14">
           Actuellement en <a target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges, je suis diplômé d'un <a target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur</a>.<br>

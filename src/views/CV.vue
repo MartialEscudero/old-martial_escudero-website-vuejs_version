@@ -1,6 +1,8 @@
 <template>
-  <div class="">
-    <h1>CV</h1>
+  <div class="flex h-screen">
+    <div class="m-auto text-md xl:mx-auto">
+      CV
+    </div>
   </div>
 </template>
 

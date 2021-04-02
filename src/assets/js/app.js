@@ -62,6 +62,7 @@ $(document).ready(function(){
   // Animation hamburger
   $(".hamburger").click(function(){
     $(this).toggleClass("is-active");
+    $(".logo").toggleClass("hidden");
     $("#nav-left").slideToggle(1500);
     $("#nav-right").slideToggle(1500);
     $("#line1").toggleClass("line-white");

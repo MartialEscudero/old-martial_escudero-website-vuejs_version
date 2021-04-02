@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>Le Labo | Concept Devis</title>
+    <link rel="icon" href="/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen" href="css/loader.css" />
+  </head>
+
+  
+  <body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        .labo-back {
+            margin-top: 3%;
+        }
+
+        .background {
+            font-family: 'Roboto', sans-serif;
+            background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+            box-shadow: 0 15px 25px rgba(0,0,0,.6);
+            height: 750px;
+            border-radius: 20px;
+            color: white;
+        }
+
+        #devis h1 {
+            font-weight: bold;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+
+        #devis h4 {
+            font-weight: bold;
+        }
+
+        #devis label, span {
+            font-size: 1.2em;
+        }
+
+        #devis span {
+            font-weight: bold;
+        }
+        
+        #devis button {
+            font-size: 1.2em;
+        }
+
+        .page {
+            margin-top: 5%;
+        }
+
+        .option {
+            margin-top: 5%;
+            margin-bottom: 8%;
+        }
+
+        #alert {
+            padding-top: 1.3%;
+            font-size: 1.2em;
+            margin: auto;
+            height: 40px;
+            width: 280px;
+            background-color: rgb(248,249,250);
+            border-radius: 4px;
+        }
+
+        /**************** Mobile ****************/
+
+        @media only screen and (min-width:300px) and (max-width:450px) {
+
+            .background {
+               /*height: 800px;*/
+            }
+
+            #devis h1 {
+                margin-top: 7%;
+                margin-bottom: 10%;
+            }
+
+            .page {
+                margin-top: 12%;
+            }
+
+            .option {
+                margin-top: 10%;
+                margin-bottom: 8%;
+            }
+
+            button {
+                margin-bottom: 10%;
+            }
+
+            #alert {
+                padding-top: 2%;
+            }
+
+        }
+
+        /* Design radio inspiration : https://codepen.io/andreasstorm/pen/jxjKGj */
+        .radio {
+            position: relative;
+            cursor: pointer;
+            line-height: 20px;
+            font-size: 14px;
+            margin: 15px;
+        }
+        .radio .label {
+            position: relative;
+            display: block;
+            float: left;
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #c8ccd4;
+            border-radius: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .radio .label:after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background: White;
+            transform: scale(0);
+            transition: all 0.2s ease;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+        .radio:hover .label:after {
+            transform: scale(3.6);
+        }
+        input[type="radio"]:checked + .label {
+            border-color: White;
+        }
+        input[type="radio"]:checked + .label:after {
+            transform: scale(1);
+            transition: all 0.2s cubic-bezier(0.35, 0.9, 0.4, 0.9);
+            opacity: 1;
+        }
+        .hidden {
+            display: none;
+        }
+        .customcheck {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .customcheck input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .customcheck:hover input ~ .checkmark {
+            background-color: #ccc;
+        }
+
+        .customcheck input:checked ~ .checkmark {
+            background-color: #42A7F6;
+            border-radius: 5px;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .customcheck input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .customcheck .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+
+    </style>
+
+    <section class="container-fluid labo-back" id="devis">
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 background">
+                <h1 class="text-center">Devis Gratuit</h1>
+                    <div class="row">
+                        <div class="col-lg-6 text-center">
+                            <label for="opt1" class="radio" id="type1">
+                                <input type="radio" name="site" id="opt1" class="hidden"/>
+                                <span class="label"></span>Site Vitrine
+                              </label>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <label for="opt2" class="radio" id="type2">
+                                <input type="radio" name="site" id="opt2" class="hidden"/>
+                                <span class="label"></span>Site E-Commerce
+                              </label>
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                        <div class="col-lg-8 text-center page">
+                            <label for="customRange3">Nombre de pages du site : </label>
+                            <span id="AfficheRange"></span><br>
+                            <input type="range" class="custom-range" name="range" min="0" max="20" step="1" id="Range" oninput="document.getElementById('AfficheRange').textContent=value" />
+                        </div>
+                        <div class="col-lg-8 container option">
+                            <h4>Options :</h4></br>
+                              <label class="customcheck">Responsive
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="customcheck">Formulaire de contact
+                                  <input type="checkbox">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="customcheck">Aide à la rédaction de pages
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="customcheck">Conception du logo
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                        </div>
+                        <div class=" col-lg-6 text-center">
+                            <button id="bouton" type="button" class="btn btn-light">Montant du devis</button>
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <div id="alert"></div>
+                        </div>    
+                    </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+
+    <script>
+
+        document.getElementById("bouton").onclick = function() {
+
+            var page = document.getElementById("Range").value;
+
+            var resultat = 0
+
+            if ((document.getElementsByTagName("input")[0].checked == false) && (document.getElementsByTagName("input")[1].checked == false)) {
+                document.getElementById("alert").innerHTML = "Sélectionne un type de site !";
+                document.getElementById("alert").style.color = "orange";
+                document.getElementById("type1").style.color = "orange";
+                document.getElementById("type2").style.color = "orange";
+                document.getElementById("type1").style.fontWeight = "700";
+                document.getElementById("type2").style.fontWeight = "700";
+			}
+
+
+            if ((document.getElementsByTagName("input")[0].checked == true) || (document.getElementsByTagName("input")[1].checked == true)) {
+                
+                if (document.getElementsByTagName("input")[0].checked == true) {
+                resultat += 1000;
+			    }
+
+                if (document.getElementsByTagName("input")[1].checked == true) {
+                    resultat += 2000;
+                }
+
+                if (document.getElementsByTagName("input")[3].checked == true) {
+                    resultat += 500;
+                }
+
+                if (document.getElementsByTagName("input")[4].checked == true) {
+                    resultat += 200;
+                }
+
+                if (document.getElementsByTagName("input")[5].checked == true) {
+                    resultat += 100;
+                }
+
+                if (document.getElementsByTagName("input")[6].checked == true) {
+                    resultat += 200;
+                }
+
+                var total = resultat + 100 * page;
+
+                document.getElementById("alert").innerHTML = "Le montant total est de " + total + "€";
+                document.getElementById("alert").style.color = "#202020";
+                document.getElementById("type1").style.color = "white";
+                document.getElementById("type2").style.color = "white";
+                document.getElementById("type1").style.fontWeight = "normal";
+                document.getElementById("type2").style.fontWeight = "normal";
+			}
+        }
+
+    </script>
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164716890-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'UA-164716890-1');
+    </script>
+
+</html>

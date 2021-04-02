@@ -30,6 +30,11 @@ const routes = [
     name: 'Contact',
     component: () => import('../views/Contact.vue')
   },
+  {
+    path: '/labo',
+    name: 'Labo',
+    component: () => import('../views/Labo.vue')
+  },
   { 
     path: '*', 
     component: Home 

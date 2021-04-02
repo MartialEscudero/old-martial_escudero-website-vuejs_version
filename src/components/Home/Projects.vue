@@ -1,15 +1,15 @@
 <template>
   <div class="xl:mt-32 sm:mt-60">
-    <div class="container mx-auto lg:text-left sm:text-center text-5xl mb-20">
+    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-20">
       Derniers projets
-    </div>
-    <div class="container mx-auto grid xl:grid-cols-2 lg:grid-cols-1 gap-x-0 gap-y-24 mt-32">
+    </h1>
+    <div class="container mx-auto grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-24 mt-32">
       <div class="mx-auto card">
         <router-link to="/projet?id=123456789">
           <img class="img-fluid" src="../../assets/img/siteme.png">
           <div class="p-5">
-            <p class="xl:text-2xl sm:text-l mt-1">Site martialescudero.com</p>
-            <p class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Développement Site Web</p>
+            <h2 class="xl:text-2xl sm:text-l mt-1">Site martialescudero.com</h2>
+            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Développement Site Web</h3>
           </div>
         </router-link>
       </div>
@@ -17,8 +17,8 @@
         <router-link to="/">
           <img class="img-fluid" src="../../assets/img/RFC.png">
           <div class="p-5">
-            <p class="xl:text-2xl sm:text-l mt-1">Rocketown Football Club</p>
-            <p class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Graphisme</p>
+            <h2 class="xl:text-2xl sm:text-l mt-1">Rocketown Football Club</h2>
+            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Graphisme</h3>
           </div>
         </router-link>
       </div>
@@ -26,8 +26,8 @@
         <router-link to="/">
           <img class="img-fluid" src="../../assets/img/siteperso.png">
           <div class="p-5">
-            <p class="xl:text-2xl sm:text-l mt-1">Site martialescudero.com V1</p>
-            <p class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Développement Site Web</p>
+            <h2 class="xl:text-2xl sm:text-l mt-1">Site martialescudero.com V1</h2>
+            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Développement Site Web</h3>
           </div>
         </router-link>
       </div>
@@ -35,15 +35,15 @@
         <router-link to="/">
           <img class="img-fluid" src="../../assets/img/lim.png">
           <div class="p-5">
-            <p class="xl:text-2xl sm:text-l mt-1">Lim'Raideurs</p>
-            <p class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Graphisme</p>
+            <h2 class="xl:text-2xl sm:text-l mt-1">Lim'Raideurs</h2>
+            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Graphisme</h3>
           </div>
         </router-link>
       </div>
     </div>
     <div class="grid grid-cols-1 mt-28">
       <div class="mx-auto">
-        <p class="text-center text-sm mb-4 opacity-50">et plus ...</p>
+        <p class="text-center text-sm mb-4 text-gray-500">et plus ...</p>
         <router-link class="btn text-white font-bold py-2 px-4 rounded-full" tag="button" to="/portfolio">Découvrir tous mes projets</router-link>
       </div>
     </div>

@@ -24,6 +24,7 @@
     <div id="nav-right" class="hidden">
       <div class="flex h-screen">
         <div class="m-auto text-md">
+          <p v-if="select == 'base'">Coucou.<br>Passez votre souris sur les différentes catégories du menu.</p>
           <p v-if="select == 'home'">{{text.home}}</p>
           <p v-if="select == 'service'">{{text.service}}</p>
           <p v-if="select == 'about'">{{text.about}}</p>
@@ -36,7 +37,7 @@
     <div id="nav" class="transparent">
       <div class="transparent flex flex-no-shrink items-stretch h-12">
         <a href="/">
-          <img class="lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
+          <img class="logo lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
         </a>
       </div>
       <div class="transparent flex items-stretch flex-no-shrink flex-grow">
@@ -71,14 +72,13 @@ require("./assets/js/app.js")
 export default {
   data: () => ({
     date: null,
-    select: 'home',
+    select: 'base',
     text: {
-      home: 'texte home',
-      service: 'texte service',
-      about: 'texte à propos',
-      portfolio: 'texte portfolio',
-      contact: 'texte contact',
-      labo: 'texte labo',
+      home: "Home, ici ça veut dire accueil en anglais. Du coup, c'est la page d'accueil.",
+      about: "Si vous avez des questions sur mon profil ou mon parcours vous trouverez ici toutes les réponses.",
+      portfolio: "Sur mon Porfolio, vous retrouvez différents projets que j'ai pu réaliser dans le domaine du Développement Web, Graphisme ou encore Audiovisuel.",
+      contact: "Si vous avez une question, un projet ou autre, vous pouvez compléter ce formulaire de contact (allez le voir il est tout beau) ou contactez moi à l'adresse suivante : contact@martialescudero.com",
+      labo: "Le Labo est un espace de mon site où on y retrouve différents mini-projets de développement web et web design que je vous invite à découvrir.",
     }
   }),
   methods: {
@@ -128,14 +128,14 @@ body::-webkit-scrollbar {
 #nav {
   position: fixed;
   top: 0;
-  height: 150px;
+  height: 140px;
   width: 100%;
+  z-index: 30;
 }
 
 #nav img {
-  margin: 50px 0 0 50px;
+  margin: 45px 0 0 50px;
   user-select: none; 
-  z-index: 10; 
 }
 
 #hamburger {
@@ -210,7 +210,7 @@ body::-webkit-scrollbar {
   color: #0e0e0e;
   width: 50%;
   height: 100%;
-  z-index: 0;
+  z-index: 10;
 }
 
 #nav-right p {
@@ -226,7 +226,7 @@ body::-webkit-scrollbar {
   background: #0e0e0e;
   width: 50%;
   height: 100%;
-  z-index: 99;
+  z-index: 10;
 }
 
 .title-nav {

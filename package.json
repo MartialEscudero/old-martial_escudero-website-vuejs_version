@@ -12,6 +12,7 @@
     "autoprefixer": "^9",
     "core-js": "^3.6.5",
     "emailjs-com": "^2.6.4",
+    "html-loader": "^2.1.2",
     "jquery": "^3.6.0",
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",

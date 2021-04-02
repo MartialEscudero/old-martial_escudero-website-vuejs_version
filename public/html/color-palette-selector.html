@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>Le Labo | Color Palette Selector</title>
+    <link rel="icon" href="/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png" />
+    <link rel="stylesheet" media="screen" href="css/loader.css" />
+  </head>
+
+  
+  <body id="background">
+
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        margin:0;
+        padding:0;
+      }
+
+      .container {
+        font-family: 'Roboto', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 49%;
+        width: 330px;
+        background: red;
+        transform: translate(-50%, -50%);
+        background: none;
+        box-sizing: border-box;
+        box-shadow: 0 7px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+      }
+
+      .sectiontop {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center; 
+        font-weight: bold;
+        font-size: 1.2em;
+        color: white;
+      }
+
+      .sectionbottom {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      .section, .sectiontop {
+        width: 300px;
+        height: 17px;
+        margin: auto;
+        transition: all 200ms;
+        padding: 17px;
+      }
+
+      .section:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,.6);
+      }
+
+      .left, .left2 {
+        text-align: left; 
+        float: left;
+      }
+
+      .right, .right2 {
+        text-align: right;
+        float: left;
+        float: none;
+      }
+
+      .left2, .right2 {
+        color: white;
+      }
+      
+    </style>
+
+    <div class="container">
+
+      <div style="background-color: #ffbf00;" class="sectiontop" onclick="button('#ffbf00');">ORANGE</div>
+
+      <div style="background-color: #ffffff;" class="section" onclick="button('#ffffff');">
+        <div class="left">100%</div>
+        <div class="right">#ffffff</div>
+      </div>
+
+      <div style="background-color: #fff3cc;" class="section" onclick="button('#fff3cc');">
+        <div class="left">90%</div>
+        <div class="right">#fff3cc</div>
+      </div>
+
+      <div style="background-color: #ffe799;" class="section" onclick="button('#ffe799');">
+        <div class="left">80%</div>
+        <div class="right">#ffe799</div>
+      </div>
+
+      <div style="background-color: #ffdb66;" class="section" onclick="button('#ffdb66');">
+        <div class="left">70%</div>
+        <div class="right">#ffdb66</div>
+      </div>
+
+      <div style="background-color: #ffcf33;" class="section" onclick="button('#ffcf33');">
+        <div class="left">60%</div>
+        <div class="right">#ffcf33</div>
+      </div>
+
+      <div style="background-color: #ffc400;" class="section" onclick="button('#ffc400');">
+        <div class="left2">50%</div>
+        <div class="right2">#ffc400</div>
+      </div>
+
+      <div style="background-color: #cc9c00;" class="section" onclick="button('#cc9c00');">
+        <div class="left2">40%</div>
+        <div class="right2">#cc9c00</div>
+      </div>
+
+      <div style="background-color: #997500;" class="section" onclick="button('#997500');">
+        <div class="left2">30%</div>
+        <div class="right2">#997500</div>
+      </div>
+
+      <div style="background-color: #664e00;" class="section" onclick="button('#664e00');">
+        <div class="left2">20%</div>
+        <div class="right2">#664e00</div>
+      </div>
+
+      <div style="background-color: #332700;" class="section" onclick="button('#332700');">
+        <div class="left2">10%</div>
+        <div class="right2">#332700</div>
+      </div>
+
+      <div style="background-color: #000000;" class="section sectionbottom" onclick="button('#000000');">
+        <div class="left2">0%</div>
+        <div class="right2">#000000</div>
+      </div>
+
+    </div>
+
+  </body>
+
+    <script>
+
+      function button(color) {
+        document.getElementById("background").style.backgroundColor = color;
+      }
+
+    </script>
+  
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164716890-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'UA-164716890-1');
+    </script>
+
+</html>

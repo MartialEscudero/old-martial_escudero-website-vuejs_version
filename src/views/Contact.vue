@@ -8,7 +8,7 @@
           <div class="flex mt-10">
             <a @click="setName()" class="m-auto xl:text-2xl">Suivant</a>
           </div>
-          <div class="text-gray-400">
+          <div class="text-gray-500">
             <p class="contact text-center xl:text-sm sm:text-xs">ou via <a class="font-bold" href="mailto:contact@martialescudero.com">contact@martialescudero.com</a></p>
           </div>
         </div>
@@ -72,7 +72,6 @@
   </div>
 </template>
 
-
 <script>
 var $ = require('jquery');
 window.$ = $;
@@ -111,7 +110,7 @@ export default {
             setTimeout(() => {this.time = 2}, 3000)
             setTimeout(() => {this.time = 1}, 4000)
             setTimeout(() => {this.time = "ZÉ PARTI 🚀 !"}, 5000)
-            setTimeout(() => {this.$router.push({path: '/'})}, 6000)
+            setTimeout(() => {this.$router.push({path: '/'})}, 5500)
         }, (error) => {
             console.log('FAILED...', error);
             this.$router.push({path: '/contact'})
@@ -204,6 +203,7 @@ export default {
   left: 0;
   right: 0;
   text-align: center;
+  z-index: 0;
 }
 
 .textarea {
@@ -261,7 +261,6 @@ a:hover, .send:hover {
   transition: .5s;
   color: #93C5FD;
   cursor: pointer;
-  user-select: none;
 }
 
 @media screen and (max-width: 640px) {
@@ -290,7 +289,6 @@ a:hover, .send:hover {
     left: 0;
     right: 0;
     text-align: center;
-    user-select: none;
   }
 
 }

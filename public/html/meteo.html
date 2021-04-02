@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>Le Labo | API Météo</title>
+    <link rel="icon" href="/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon.png" />
+    <link rel="stylesheet" media="screen" href="css/loader.css" />
+  </head>
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+
+    .container {
+      position: relative;
+      font-family: 'Roboto', sans-serif;
+      margin: auto;
+      background-color: #4c6783;
+      height: 255px;
+      width: 320px;
+      padding: 15px;
+      padding-left: 20px;
+      color: white;
+      padding-bottom: 20px;
+    }
+
+    #image {
+      background-image: url("");
+      height: 100px;
+      width: 100px;
+      position: relative;
+      right: -105px;
+      top: -20px;
+    }
+
+    #ville {
+      position: relative;
+      font-size: 65px;
+      font-weight: 700;
+    }
+
+    #temp {
+      float: left;
+      font-size: 50px;
+      font-weight: 300;
+    }
+
+    #vent {
+      float: left;
+    }
+
+    #heure {
+      float: left;
+      width: 209px;
+      text-align: right;
+    }
+
+    .recherche {
+      top: 80px;
+      position: relative;
+      width: 242px;
+      height: 200px;
+      margin: auto;
+    }
+
+    input {
+      text-align: center;
+    }
+
+  </style>
+
+  <body onKeyPress="if (event.keyCode == 13) bouton()" onload="bouton()">
+    
+    <div class="recherche">
+      <input id="localisation" type="text" value="Paris" />
+      <input type="button" value="Afficher"  onclick="bouton()" />
+    </div>
+
+    <div class="container">
+        <div id="ville"></div>
+        <div id="temp"></div>
+        <div id="image"></div>
+        <div id="humidite"></div>
+        <div id="vent"></div>
+        <div id="heure"></div>
+    </div>
+
+  </body>
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164716890-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-164716890-1');
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+
+    var appel = function(data) {
+        console.log("API", data)
+
+        document.getElementById("ville").innerHTML = strUcFirst(localisation.value);
+
+        document.getElementById("temp").innerHTML = Math.ceil(data.main.temp) + "°C";
+
+        var urlimg = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+        document.getElementById("image").style.backgroundImage = "url('"+ urlimg +"')";
+
+        document.getElementById("humidite").innerHTML = "Humidité : " + data.main.humidity + "%";
+
+        document.getElementById("vent").innerHTML = "Vent : " + Math.ceil(data.wind.speed * 3.6) + " km/h";
+        if (Math.ceil(data.wind.speed * 3.6) < 10) {
+          document.getElementById("heure").style.width = "220px";
+        }
+
+        if (localisation.value.length >= 10) {
+          document.getElementById("ville").style.fontSize = "40px";
+          document.getElementById("ville").style.marginBottom = "65px";
+          document.getElementById("ville").style.top = "7px";
+        }
+        if (localisation.value.length < 10) {
+          document.getElementById("ville").style.fontSize = "65px";
+          document.getElementById("ville").style.marginBottom = "35px";
+          document.getElementById("ville").style.top = "0px";
+        }
+
+        var d = new Date();
+        var hoursutc = (d.getHours() - 2)+ ":" + d.getMinutes();
+        var heure = (d.getHours() - 2 + (data.timezone/3600));
+        if (d.getMinutes() < 10) {
+          heure = heure + ":0" + d.getMinutes();
+        }
+        else {
+          heure = heure + ":" + d.getMinutes();
+        }
+        document.getElementById("heure").innerHTML = heure;
+        console.log("Heure UTC :", hoursutc);
+        console.log("Heure " + strUcFirst(localisation.value) + " :", heure);
+    }
+
+
+    function bouton() {
+        
+        var localisation = document.getElementById("localisation").value;
+
+        var url = "https://api.openweathermap.org/data/2.5/weather?q="+localisation+"&appid=13623228272d97f2b5199dbdab91170d&units=metric"
+
+        $.get(url, appel).done(function() {
+        })
+        .fail(function() {
+            alert("Et là, c'est le bug  (┛ಠ_ಠ)┛彡┻━┻");
+        })
+        .always(function() {
+        });
+    }
+
+    function strUcFirst(a){return (a+'').charAt(0).toUpperCase()+a.substr(1);} // Mettre en majuscule
+
+  </script>
+
+</html>
