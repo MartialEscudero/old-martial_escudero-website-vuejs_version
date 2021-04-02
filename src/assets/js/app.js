@@ -73,6 +73,7 @@ $(document).ready(function(){
 
   $(".btn-nav").click(function(){
     $(".hamburger").toggleClass("is-active");
+    $(".logo").toggleClass("hidden");
     $("#line1").toggleClass("line-white");
     $("#line2").toggleClass("line-white");
     $("#line1").toggleClass("line-black");
