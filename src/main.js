@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './assets/tailwind.css'
+import{ init } from 'emailjs-com';
+
+init("user_PFnEAgnCIgPitvseq0QYE");
 
 Vue.config.productionTip = false
 

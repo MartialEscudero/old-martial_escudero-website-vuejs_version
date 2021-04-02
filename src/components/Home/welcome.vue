@@ -24,10 +24,3 @@
     </div>
   </div>
 </template>
-
-<script>
-require("../../assets/js/letter.js")
-</script>
-
-<style scoped>
-</style>
