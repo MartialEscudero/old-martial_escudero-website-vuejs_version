@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-44 h-full sm:mb-7">
+  <div class="xl:mt-44 sm:mt-28 h-full sm:mb-7">
     <div class="container mx-auto lg:text-left sm:text-center text-5xl mb-2">
       Portfolio
     </div>
