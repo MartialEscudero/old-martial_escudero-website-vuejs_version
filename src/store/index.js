@@ -18,6 +18,7 @@ export default new Vuex.Store ({
       for (let index = 0; index < state.projet.Techno.length; index++) {
         state.projet.Techno = state.projet.Techno.replace(',',' |')
       }
+      console.log(state.projet)
     }
   },
   actions: {

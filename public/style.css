@@ -1,0 +1,52 @@
+#markdown p {
+  margin-top: 1rem;
+}
+
+#markdown h1 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  color: #93C5FD
+}
+
+#markdown h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+#markdown ul {
+  margin-top: .5rem;
+}
+
+#markdown li::before {
+  content: "- ";
+  margin: .2rem;
+}
+
+#markdown a {
+  color: #93C5FD;
+}
+
+#markdown a:hover {
+  transition: .5s;
+  background: #93C5FD;
+  color: #0e0e0e;
+}
+
+#markdown img {
+  margin-top: 2rem;
+  margin: auto;
+  width: 80%;
+}
+
+#markdown iframe {
+  margin: auto;
+  width: 1120px;
+  height: 630px;
+}
+
+@media screen and (max-width: 640px) {
+  #markdown iframe {
+    width: 311px;
+    height: 175px;
+  }
+}

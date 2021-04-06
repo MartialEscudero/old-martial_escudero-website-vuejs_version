@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import './assets/tailwind.css'
 import VueMeta from 'vue-meta'
+import VueMarkdown from 'vue-markdown';
+
+Vue.component('vue-markdown', VueMarkdown);
 
 Vue.use(VueMeta)
 
