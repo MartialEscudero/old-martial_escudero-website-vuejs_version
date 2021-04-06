@@ -4,39 +4,12 @@
       Derniers projets
     </h1>
     <div class="container mx-auto grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-24 mt-32">
-      <div class="mx-auto card">
-        <router-link to="/projet?id=123456789">
-          <img class="img-fluid" src="../../assets/img/siteme.png">
+      <div class="mx-auto card" v-for="projet in projets.slice(0, 4)" :key="projet.item">
+        <router-link :to="'/projet?id='+projet.id">
+          <img class="img-fluid" :src="projet.Image[0].url">
           <div class="p-5">
-            <h2 class="xl:text-2xl sm:text-l mt-1">Site martialescudero.com</h2>
-            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Développement Site Web</h3>
-          </div>
-        </router-link>
-      </div>
-      <div class="mx-auto card">
-        <router-link to="/">
-          <img class="img-fluid" src="../../assets/img/RFC.png">
-          <div class="p-5">
-            <h2 class="xl:text-2xl sm:text-l mt-1">Rocketown Football Club</h2>
-            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Graphisme</h3>
-          </div>
-        </router-link>
-      </div>
-      <div class="mx-auto card">
-        <router-link to="/">
-          <img class="img-fluid" src="../../assets/img/siteperso.png">
-          <div class="p-5">
-            <h2 class="xl:text-2xl sm:text-l mt-1">Site martialescudero.com V1</h2>
-            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Développement Site Web</h3>
-          </div>
-        </router-link>
-      </div>
-      <div class="mx-auto card">
-        <router-link to="/">
-          <img class="img-fluid" src="../../assets/img/lim.png">
-          <div class="p-5">
-            <h2 class="xl:text-2xl sm:text-l mt-1">Lim'Raideurs</h2>
-            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">Graphisme</h3>
+            <h2 class="xl:text-2xl sm:text-l mt-1">{{projet.Titre}}</h2>
+            <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">{{projet.type.Type}}</h3>
           </div>
         </router-link>
       </div>
@@ -51,7 +24,12 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
+  computed: {
+    ...mapGetters(['projets']),
+  },  
 }
 </script>
 

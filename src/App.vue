@@ -69,6 +69,8 @@
 <script>
 require("./assets/js/app.js")
 
+import { mapActions } from 'vuex'
+
 export default {
   metaInfo () {
     return {
@@ -92,9 +94,11 @@ export default {
     },
     getUrl(){
       return window.location.href.substring(window.location.href.length-3)
-    }
+    },
+    ...mapActions(['getProjets']),
   },
   mounted() {
+    this.getProjets()
     this.date = this.getDate()
     window.scroll(0, 0)
   }

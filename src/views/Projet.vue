@@ -2,32 +2,23 @@
   <div class="h-full mb-7">
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-4 xl:mt-60 md:mt-44 sm:mt-32">
       <div class="xl:mr-10 sm:mr-4 sm:ml-4">
-        <h1 class="xl:text-4xl sm:text-2xl">Site martialescudero.com</h1>
-        <h2 class="xl:text-xl font-bold  text-blue-300">Développement Site Web</h2>
-        <h3 class="xl:text-md mt-5">Vue.JS | JS | CSS</h3>
+        <h1 class="xl:text-4xl sm:text-2xl">{{projet.Titre}}</h1>
+        <h2 class="xl:text-xl font-bold  text-blue-300" v-for="type in projet" :key="type.item">{{type.Type}}</h2>
+        <h3 class="xl:text-md mt-5">{{projet.Techno}}</h3>
         <p class="text-justify mt-5 mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida tristique pretium. Vestibulum in arcu a nunc porta sollicitudin. Proin congue eros eu arcu mollis tempor. Integer et lobortis lectus. Fusce ut magna et tellus fermentum pellentesque. Proin luctus interdum ullamcorper. Mauris tristique vitae tortor non posuere. Quisque eget elit nunc. Aliquam tincidunt elit metus, quis convallis lorem fringilla non. Mauris mauris risus, malesuada nec dignissim vitae, ultrices id ligula. Donec at ullamcorper velit, ac ultrices ex. Cras sed justo blandit, viverra justo sed, mattis leo. Pellentesque ac lobortis augue.
-          <br><br>
-           Sed tincidunt commodo urna sit amet sodales. Duis fringilla ipsum ac efficitur cursus. Proin sit amet lectus a ex pulvinar auctor at vitae velit. Vivamus nec auctor libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et venenatis turpis. Duis in enim et augue laoreet molestie vulputate in justo. Praesent facilisis velit eu malesuada pellentesque. Vivamus maximus odio neque, a fermentum mi lacinia non. Quisque vulputate tortor ac finibus malesuada. Nam sapien nibh, elementum sit amet ipsum sed, laoreet blandit magna. Nunc sollicitudin pellentesque mi vel congue.
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida tristique pretium. Vestibulum in arcu a nunc porta sollicitudin. Proin congue eros eu arcu mollis tempor. Integer et lobortis lectus. Fusce ut magna et tellus fermentum pellentesque. Proin luctus interdum ullamcorper. Mauris tristique vitae tortor non posuere. Quisque eget elit nunc. Aliquam tincidunt elit metus, quis convallis lorem fringilla non. Mauris mauris risus, malesuada nec dignissim vitae, ultrices id ligula. Donec at ullamcorper velit, ac ultrices ex. Cras sed justo blandit, viverra justo sed, mattis leo. Pellentesque ac lobortis augue.
-          <br><br>
-           Sed tincidunt commodo urna sit amet sodales. Duis fringilla ipsum ac efficitur cursus. Proin sit amet lectus a ex pulvinar auctor at vitae velit. Vivamus nec auctor libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et venenatis turpis. Duis in enim et augue laoreet molestie vulputate in justo. Praesent facilisis velit eu malesuada pellentesque. Vivamus maximus odio neque, a fermentum mi lacinia non. Quisque vulputate tortor ac finibus malesuada. Nam sapien nibh, elementum sit amet ipsum sed, laoreet blandit magna. Nunc sollicitudin pellentesque mi vel congue.
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent gravida tristique pretium. Vestibulum in arcu a nunc porta sollicitudin. Proin congue eros eu arcu mollis tempor. Integer et lobortis lectus. Fusce ut magna et tellus fermentum pellentesque. Proin luctus interdum ullamcorper. Mauris tristique vitae tortor non posuere. Quisque eget elit nunc. Aliquam tincidunt elit metus, quis convallis lorem fringilla non. Mauris mauris risus, malesuada nec dignissim vitae, ultrices id ligula. Donec at ullamcorper velit, ac ultrices ex. Cras sed justo blandit, viverra justo sed, mattis leo. Pellentesque ac lobortis augue.
-          <br><br>
-           Sed tincidunt commodo urna sit amet sodales. Duis fringilla ipsum ac efficitur cursus. Proin sit amet lectus a ex pulvinar auctor at vitae velit. Vivamus nec auctor libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et venenatis turpis. Duis in enim et augue laoreet molestie vulputate in justo. Praesent facilisis velit eu malesuada pellentesque. Vivamus maximus odio neque, a fermentum mi lacinia non. Quisque vulputate tortor ac finibus malesuada. Nam sapien nibh, elementum sit amet ipsum sed, laoreet blandit magna. Nunc sollicitudin pellentesque mi vel congue.
-          <br>   
+          {{projet.Texte}}
         </p>
       </div>
-      <div class="mx-auto xl:mt-0 sm:mt-10 sm:mr-4 sm:ml-4">
-        <img src="../assets/img/siteme.png">
+      <div class="mx-auto xl:mt-0 sm:mt-10 sm:mr-4 sm:ml-4" v-for="img in projet.Image" :key="img.item">
+        <img :src="img.url">
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   metaInfo () {
     return {
@@ -37,8 +28,16 @@ export default {
   data: () => ({
     id: null,
   }),
+  methods: {
+    ...mapActions(['getProjetSelect']),
+  },
+  computed: {
+    
+    ...mapGetters(['projet']),
+  },
   mounted() {
     this.id = this.$route.query.id
+    this.getProjetSelect(this.$route.query.id)
     window.scroll(0, 0)
   }
 }
