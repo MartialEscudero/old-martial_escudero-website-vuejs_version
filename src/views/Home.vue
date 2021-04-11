@@ -1,17 +1,30 @@
 <template>
   <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Welcome />
+    <About />
+    <Projects />
+    <Contactme />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/Home/welcome.vue'
+import Welcome from '@/components/Home/Welcome.vue'
+import About from '@/components/Home/About.vue'
+import Projects from '@/components/Home/Projects.vue'
+import Contactme from '@/components/Home/Contactme.vue'
 
 export default {
+  metaInfo () {
+    return {
+      title : 'Martial Escudero | Étudiant - Développeur Web',
+    }
+  },
   name: 'Home',
   components: {
-    HelloWorld
+    Welcome,
+    About,
+    Projects,
+    Contactme,
   }
 }
 </script>
