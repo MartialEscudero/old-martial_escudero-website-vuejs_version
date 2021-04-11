@@ -1,10 +1,10 @@
 <template>
   <div class="xl:mt-44 md:mt-36 sm:mt-28 h-full sm:mb-7">
-    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-2">
+    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-2" data-aos="fade-right">
       Portfolio
     </h1>
     <div class="container mx-auto grid xl:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="mx-auto card" v-for="projet in projets" :key="projet.item">
+      <div class="mx-auto card" v-for="projet in projets" :key="projet.item" data-aos="fade-up">
         <router-link :to="'/projet?id='+projet.id">
           <img class="img-fluid" :src="projet.Image[0].url">
           <div class="p-5">

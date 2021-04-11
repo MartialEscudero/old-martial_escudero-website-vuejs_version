@@ -1,11 +1,11 @@
 <template>
   <div class="fxl:mt-44 md:mt-36 sm:mt-28 sm:mb-7">
-    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-2">
+    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-2" data-aos="fade-right">
       CV
     </h1>
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="text-center text-4xl font-bold">Moi.</div>
-      <div class="text-justify">
+      <div class="text-center text-4xl font-bold" data-aos="fade-right">Moi.</div>
+      <div class="text-justify" data-aos="fade-left">
         <p>
           Actuellement en <a class="lien" target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges,
           je suis diplômé d'un <a class="lien" target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur.</a>
@@ -24,8 +24,8 @@
       </div>
     </div>
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="text-center text-4xl font-bold">Diplôme.</div>
-      <div class="text-justify">
+      <div class="text-center text-4xl font-bold" data-aos="fade-right">Diplôme.</div>
+      <div class="text-justify" data-aos="fade-left">
         <article>
           <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Université de Limoges, Faculté Sciences Et Techniques</span> | DEUST</p>
           <div class="italic mt-2 mb-5 text-xs"><span class="date">SEPTEMBRE 2019 - LIMOGES</span></div>
@@ -39,8 +39,8 @@
       </div>
     </div>
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="text-center text-4xl font-bold">Expériences.</div>
-      <div class="text-justify">
+      <div class="text-center text-4xl font-bold" data-aos="fade-right">Expériences.</div>
+      <div class="text-justify" data-aos="fade-left">
         <article>
           <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Site Web Personnel</span> | Cadre Personnel</p>
           <div class="italic mt-2 mb-5 text-xs"><span class="date">AVRIL 2021</span></div>
@@ -93,100 +93,100 @@
       </div>
     </div>
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="text-center text-4xl font-bold">Compétences.</div>
-      <div>
+      <div class="text-center text-4xl font-bold" data-aos="fade-right">Compétences.</div>
+      <div data-aos="fade-left">
         <article class="text-justify">
-        <h1 class="text-left font-bold text-2xl">Languages</h1>
-        <hr class="my-6">
-        <section v-for="language in languages" :key="language.item">
-          <div class="relative pt-1">
-            <div class="flex mb-2 items-center justify-between">
-              <div>
-                <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                  {{language.name}}
-                </span>
+          <h1 class="text-left font-bold text-2xl">Languages</h1>
+          <hr class="my-6">
+          <section v-for="language in languages" :key="language.item">
+            <div class="relative pt-1">
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
+                    {{language.name}}
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-semibold inline-block">
+                    {{language.pourcent}}%
+                  </span>
+                </div>
               </div>
-              <div class="text-right">
-                <span class="text-xs font-semibold inline-block">
-                  {{language.pourcent}}%
-                </span>
-              </div>
-            </div>
-            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-              <div :style="'width:'+language.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
-            </div>
-          </div>
-        </section>
-      </article>
-      <article class="text-justify mt-10">
-        <h1 class="text-left font-bold text-2xl">Framework</h1>
-        <hr class="my-6">
-        <section v-for="framework in frameworks" :key="framework.item">
-          <div class="relative pt-1">
-            <div class="flex mb-2 items-center justify-between">
-              <div>
-                <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                  {{framework.name}}
-                </span>
-              </div>
-              <div class="text-right">
-                <span class="text-xs font-semibold inline-block">
-                  {{framework.pourcent}}%
-                </span>
+              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
+                <div :style="'width:'+language.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
               </div>
             </div>
-            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-              <div :style="'width:'+framework.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
-            </div>
-          </div>
-        </section>
-      </article>
-      <article class="text-justify mt-10">
-        <h1 class="text-left font-bold text-2xl">CMS</h1>
-        <hr class="my-6">
-        <section v-for="cms in cmss" :key="cms.item">
-          <div class="relative pt-1">
-            <div class="flex mb-2 items-center justify-between">
-              <div>
-                <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                  {{cms.name}}
-                </span>
+          </section>
+        </article>
+        <article class="text-justify mt-10">
+          <h1 class="text-left font-bold text-2xl">Framework</h1>
+          <hr class="my-6">
+          <section v-for="framework in frameworks" :key="framework.item">
+            <div class="relative pt-1">
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
+                    {{framework.name}}
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-semibold inline-block">
+                    {{framework.pourcent}}%
+                  </span>
+                </div>
               </div>
-              <div class="text-right">
-                <span class="text-xs font-semibold inline-block">
-                  {{cms.pourcent}}%
-                </span>
-              </div>
-            </div>
-            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-              <div :style="'width:'+cms.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
-            </div>
-          </div>
-        </section>
-      </article>
-      <article class="text-justify mt-10">
-        <h1 class="text-left font-bold text-2xl">Design</h1>
-        <hr class="my-6">
-        <section v-for="design in designs" :key="design.item">
-          <div class="relative pt-1">
-            <div class="flex mb-2 items-center justify-between">
-              <div>
-                <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                  {{design.name}}
-                </span>
-              </div>
-              <div class="text-right">
-                <span class="text-xs font-semibold inline-block">
-                  {{design.pourcent}}%
-                </span>
+              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
+                <div :style="'width:'+framework.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
               </div>
             </div>
-            <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-              <div :style="'width:'+design.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
+          </section>
+        </article>
+        <article class="text-justify mt-10">
+          <h1 class="text-left font-bold text-2xl">CMS</h1>
+          <hr class="my-6">
+          <section v-for="cms in cmss" :key="cms.item">
+            <div class="relative pt-1">
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
+                    {{cms.name}}
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-semibold inline-block">
+                    {{cms.pourcent}}%
+                  </span>
+                </div>
+              </div>
+              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
+                <div :style="'width:'+cms.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
+              </div>
             </div>
-          </div>
-        </section>
-      </article>
+          </section>
+        </article>
+        <article class="text-justify mt-10">
+          <h1 class="text-left font-bold text-2xl">Design</h1>
+          <hr class="my-6">
+          <section v-for="design in designs" :key="design.item">
+            <div class="relative pt-1">
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
+                    {{design.name}}
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-semibold inline-block">
+                    {{design.pourcent}}%
+                  </span>
+                </div>
+              </div>
+              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
+                <div :style="'width:'+design.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
+              </div>
+            </div>
+          </section>
+        </article>
       </div>
     </div>
   </div>

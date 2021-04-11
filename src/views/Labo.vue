@@ -2,27 +2,27 @@
   <div class="flex h-screen">
     <div class="m-auto text-md xl:mx-auto">
       <div id="labo">
-        <p class="text-center elementlabo">
+        <p class="text-center elementlabo" data-aos="fade-up">
           <router-link target="_blank" to="/contact" class="effect labotext5 xl:text-6xl sm:text-4xl">
             Contact Form Single
           </router-link>
         </p>       
-        <p class="text-center elementlabo">
+        <p class="text-center elementlabo" data-aos="fade-up">
           <a target="_blank" href="/html/meteo.html" class="effect labotext4 xl:text-6xl sm:text-4xl">
             API Météo
           </a>
         </p>
-        <p class="text-center elementlabo">
+        <p class="text-center elementlabo" data-aos="fade-up">
           <a target="_blank" href="/html/hexaclock.html" class="effect labotext3 xl:text-6xl sm:text-4xl">
             HexaClock
           </a>
         </p>
-        <p class="text-center elementlabo">
+        <p class="text-center elementlabo" data-aos="fade-up">
           <a target="_blank" href="/html/color-palette-selector.html" class="effect labotext2 xl:text-6xl sm:text-4xl">
             Color Palette Selector
           </a>
         </p>
-        <p class="text-center elementlabo">
+        <p class="text-center elementlabo" data-aos="fade-up">
           <a target="_blank" href="/html/concept-devis.html" class="effect labotext xl:text-6xl sm:text-4xl">
             Concept Devis
           </a>

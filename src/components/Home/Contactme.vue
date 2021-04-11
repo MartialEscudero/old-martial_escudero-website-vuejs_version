@@ -1,11 +1,11 @@
 <template>
   <div class="flex mt-52">
     <div class="m-auto grid grid-cols-1">
-      <h1 class="text-center xl:text-4xl sm:text-2xl sm:ml-5 sm:mr-5 font-bold">
+      <h1 class="text-center xl:text-4xl sm:text-2xl sm:ml-5 sm:mr-5 font-bold" data-aos="fade-right">
         Vous avez une question ? Un projet ? Ou autre ?
       </h1>
       <div class="mx-auto mt-16 mb-20">
-        <router-link class="btn text-white font-bold text-2xl py-2 px-5 rounded-full" tag="button" to="/contact">Me contacter</router-link>
+        <router-link class="btn text-white font-bold text-2xl py-2 px-5 rounded-full" tag="button" to="/contact" data-aos="fade-up">Me contacter</router-link>
       </div>
     </div>
   </div>

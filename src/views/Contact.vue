@@ -4,11 +4,11 @@
       <form v-show="displayForm == true" id="contact-form" name="contact-form" @submit.prevent="sendEmail">
         <p class="xl:text-lg sm:text-xs msgerror"></p>
         <div v-show="displayName == true">
-          <input v-model="name" class="input xl:text-4xl sm:text-lg" placeholder="Nom" type="text" name="user_name">
+          <input v-model="name" class="input xl:text-4xl sm:text-lg" placeholder="Nom" type="text" name="user_name" data-aos="fade-up">
           <div class="flex mt-10">
-            <a @click="setName()" class="m-auto xl:text-2xl">Suivant</a>
+            <a @click="setName()" class="m-auto xl:text-2xl" data-aos="fade-up">Suivant</a>
           </div>
-          <div class="text-gray-500">
+          <div class="text-gray-500" data-aos="fade-up">
             <p class="contact text-center xl:text-sm sm:text-xs">ou via <a class="font-bold" href="mailto:contact@martialescudero.com">contact@martialescudero.com</a></p>
           </div>
         </div>

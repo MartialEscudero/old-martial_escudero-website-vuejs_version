@@ -1,21 +1,21 @@
 <template>
   <div class="mt-32 h-screen">
-    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-16">
+    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-16" data-aos="fade-right">
       À Propos
     </h1>
     <div class="container mx-auto grid xl:grid-cols-2 lg:grid-cols-1 gap-4 mt-32">
       <div class="mx-auto text-justify xl:m-0 sm:ml-5 sm:mr-5">
-        <h2 class="text-3xl font-bold mt-10">Martial <span>Escudero</span></h2>
-        <h3 class="text-2xl ">{{age}} ans</h3>
-        <router-link class="btn text-white font-bold py-2 px-4 rounded-full mt-14" tag="button" to="/cv">Voir mon CV</router-link>
-        <p class="mt-14">
+        <h2 class="text-3xl font-bold mt-10" data-aos="fade-up">Martial Escudero</h2>
+        <h3 class="text-2xl" data-aos="fade-up">{{age}} ans</h3>
+        <router-link class="btn text-white font-bold py-2 px-4 rounded-full mt-14" tag="button" to="/cv" data-aos="fade-up">Voir mon CV</router-link>
+        <p class="mt-14" data-aos="fade-up">
           Actuellement en <a target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges, je suis diplômé d'un <a target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur</a>.<br>
           Vous pouvez trouver certains de mes projets sous l'entité <a target="_blank" href="https://www.behance.net/pureproduction/">"Pure. Production"</a>.
         </p>
-        <p class="mt-14">
+        <p class="mt-14" data-aos="fade-up">
           Passionné et autodidacte depuis toujours, je saurais m'investir et vous accompagnez dans vos projets.
         </p>
-        <div id="social" class="flex mt-16">
+        <div id="social" class="flex mt-16" data-aos="fade-up">
           <div class="xl:mr-7">
             <a class="flex-auto" href="https://www.linkedin.com/in/martial-escudero/" target="_blank">
                 <svg class="svg-icon" viewBox="0 0 23.273 23.273">
@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto mt-32 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden">
+      <div class="mx-auto mt-32 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden" data-aos="fade-up">
         <img class="lg:w-50" src="../../assets/img/icon.png">
       </div>
     </div>

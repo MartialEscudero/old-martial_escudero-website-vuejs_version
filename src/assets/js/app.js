@@ -84,10 +84,10 @@ $(document).ready(function(){
 
 
   $(window).scroll(function() {
-    if ($(window).scrollTop() >= 200) {
+    if ($(window).scrollTop() >= 300) {
         $('#footer-scroll').addClass('hidden');
     }
-    if ($(window).scrollTop() <= 100) {
+    if ($(window).scrollTop() <= 300) {
       $('#footer-scroll').removeClass('hidden');
   }
 })

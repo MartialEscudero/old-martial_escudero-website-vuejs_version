@@ -31,7 +31,8 @@ export default new Vuex.Store ({
         console.log(err)
       })
     },
-    getProjetSelect({commit}, item) {
+    getProjetSelect({state, commit}, item) {
+      state.projet = []
       axios.get('https://strapi-martialescudero.herokuapp.com/projets?id_eq='+item)
       .then( (res) => {
         commit('setProjetSelect', res.data)

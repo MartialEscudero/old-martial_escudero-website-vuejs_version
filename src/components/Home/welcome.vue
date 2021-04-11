@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-screen">
+  <div class="flex h-screen" data-aos="fade">
     <div class="m-auto">
       <h1 class="lg:text-6xl sm:text-4xl font-bold">
         Hello,

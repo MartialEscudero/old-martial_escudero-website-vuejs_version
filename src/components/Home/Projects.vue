@@ -1,10 +1,10 @@
 <template>
   <div class="xl:mt-32 sm:mt-60">
-    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-20">
+    <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-20" data-aos="fade-right">
       Derniers projets
     </h1>
     <div class="container mx-auto grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-24 mt-32">
-      <div class="mx-auto card" v-for="projet in projets.slice(0, 4)" :key="projet.item">
+      <div class="mx-auto card" v-for="projet in projets.slice(0, 4)" :key="projet.item" data-aos="fade-up">
         <router-link :to="'/projet?id='+projet.id">
           <img class="img-fluid" :src="projet.Image[0].url">
           <div class="p-5">
@@ -14,7 +14,7 @@
         </router-link>
       </div>
     </div>
-    <div class="grid grid-cols-1 mt-28">
+    <div class="grid grid-cols-1 mt-28" data-aos="fade-up">
       <div class="mx-auto">
         <p class="text-center text-sm mb-4 text-gray-500">et plus ...</p>
         <router-link class="btn text-white font-bold py-2 px-4 rounded-full" tag="button" to="/portfolio">Découvrir tous mes projets</router-link>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-aos="fade">
     <div id="nav-left" class="hidden">
       <div class="flex h-screen">
         <div class="m-auto text-4xl font-bold">
