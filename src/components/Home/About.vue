@@ -7,7 +7,9 @@
       <div class="mx-auto text-justify xl:m-0 sm:ml-5 sm:mr-5">
         <h2 class="text-3xl font-bold mt-10" data-aos="fade-up">Martial Escudero</h2>
         <h3 class="text-2xl" data-aos="fade-up">{{age}} ans</h3>
-        <router-link class="btn text-white font-bold py-2 px-4 rounded-full mt-14" tag="button" to="/cv" data-aos="fade-up">Voir mon CV</router-link>
+        <div data-aos="fade-up">
+          <router-link class="btn text-white font-bold py-2 px-4 rounded-full mt-14" tag="button" to="/cv">Voir mon CV</router-link>
+        </div>
         <p class="mt-14" data-aos="fade-up">
           Actuellement en <a target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges, je suis diplômé d'un <a target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur</a>.<br>
           Vous pouvez trouver certains de mes projets sous l'entité <a target="_blank" href="https://www.behance.net/pureproduction/">"Pure. Production"</a>.

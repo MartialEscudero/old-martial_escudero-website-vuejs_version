@@ -31,7 +31,12 @@ const routes = [
     component: () => import('../views/Portfolio.vue')
   },
   {
-    path: '/projet',
+    path: '/projets',
+    name: 'Projets',
+    component: () => import('../views/Portfolio.vue')
+  },
+  {
+    path: '/projet/:slug',
     name: 'Projet',
     component: () => import('../views/Projet.vue')
   },
@@ -44,6 +49,11 @@ const routes = [
     path: '/labo',
     name: 'Labo',
     component: () => import('../views/Labo.vue')
+  },
+  { 
+    path: '/404', 
+    name: '404',
+    component: () => import('../views/404.vue')
   },
   { 
     path: '*', 
