@@ -16,6 +16,16 @@ const routes = [
     component: () => import('../views/CV.vue')
   },
   {
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/CV.vue')
+  },
+  {
+    path: '/a-propos',
+    name: 'à propos',
+    component: () => import('../views/CV.vue')
+  },
+  {
     path: '/portfolio',
     name: 'Portfolio',
     component: () => import('../views/Portfolio.vue')
@@ -37,7 +47,7 @@ const routes = [
   },
   { 
     path: '*', 
-    component: Home 
+    component: () => import('../views/404.vue')
   }
 ]
 

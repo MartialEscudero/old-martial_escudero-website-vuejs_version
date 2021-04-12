@@ -7,7 +7,8 @@ Vue.use(Vuex)
 export default new Vuex.Store ({
   state: {
     projets: [],
-    projet: []
+    projet: [],
+    projetDefined: true,
   },
   mutations: {
     setProjet(state, args) {
@@ -18,7 +19,6 @@ export default new Vuex.Store ({
       for (let index = 0; index < state.projet.Techno.length; index++) {
         state.projet.Techno = state.projet.Techno.replace(',',' |')
       }
-      console.log(state.projet)
     }
   },
   actions: {
@@ -33,17 +33,20 @@ export default new Vuex.Store ({
     },
     getProjetSelect({state, commit}, item) {
       state.projet = []
+      state.projetDefined = true
       axios.get('https://strapi-martialescudero.herokuapp.com/projets?id_eq='+item)
       .then( (res) => {
         commit('setProjetSelect', res.data)
       })
       .catch( (err) => {
         console.log(err)
+        state.projetDefined = false
       })
     }
   },
   getters: {
     projets: state => state.projets,
-    projet: state => state.projet
+    projet: state => state.projet,
+    projetDefined: state => state.projetDefined
   }
 })
