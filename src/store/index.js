@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios';
+import axios from 'axios'
+import router from '../router'
 
 Vue.use(Vuex)
 
@@ -8,7 +9,6 @@ export default new Vuex.Store ({
   state: {
     projets: [],
     projet: [],
-    projetDefined: true,
   },
   mutations: {
     setProjet(state, args) {
@@ -33,20 +33,18 @@ export default new Vuex.Store ({
     },
     getProjetSelect({state, commit}, item) {
       state.projet = []
-      state.projetDefined = true
-      axios.get('https://strapi-martialescudero.herokuapp.com/projets?id_eq='+item)
+      axios.get('https://strapi-martialescudero.herokuapp.com/projets?Slug_eq='+item)
       .then( (res) => {
         commit('setProjetSelect', res.data)
       })
       .catch( (err) => {
         console.log(err)
-        state.projetDefined = false
+        router.push({path: '/404'})
       })
     }
   },
   getters: {
     projets: state => state.projets,
-    projet: state => state.projet,
-    projetDefined: state => state.projetDefined
+    projet: state => state.projet
   }
 })

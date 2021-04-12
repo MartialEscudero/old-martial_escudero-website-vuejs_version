@@ -27,15 +27,12 @@ export default {
     ...mapActions(['getProjetSelect']),
   },
   computed: {
-    ...mapGetters(['projet', 'projetDefined']),
+    ...mapGetters(['projet']),
   },
   mounted() {
     window.scroll(0, 0)
     this.id = this.$route.query.id
-    this.getProjetSelect(this.$route.query.id)
-    setTimeout(() => {
-      if (this.projetDefined == false) (this.$router.push({path: '/404'}))
-    }, 500)
+    this.getProjetSelect(this.$route.params.slug)
   }
 }
 </script>
