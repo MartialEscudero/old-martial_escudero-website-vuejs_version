@@ -8,22 +8,22 @@
           </router-link>
         </p>       
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="/html/meteo.html" class="effect labotext4 xl:text-6xl sm:text-4xl">
+          <a target="_blank" href="/assets/html/meteo.html" class="effect labotext4 xl:text-6xl sm:text-4xl">
             API Météo
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="/html/hexaclock.html" class="effect labotext3 xl:text-6xl sm:text-4xl">
+          <a target="_blank" href="/assets/html/hexaclock.html" class="effect labotext3 xl:text-6xl sm:text-4xl">
             HexaClock
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="/html/color-palette-selector.html" class="effect labotext2 xl:text-6xl sm:text-4xl">
+          <a target="_blank" href="/assets/html/color-palette-selector.html" class="effect labotext2 xl:text-6xl sm:text-4xl">
             Color Palette Selector
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="/html/concept-devis.html" class="effect labotext xl:text-6xl sm:text-4xl">
+          <a target="_blank" href="/assets/html/concept-devis.html" class="effect labotext xl:text-6xl sm:text-4xl">
             Concept Devis
           </a>
         </p>
