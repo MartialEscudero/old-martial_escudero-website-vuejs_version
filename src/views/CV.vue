@@ -7,8 +7,7 @@
       <div class="text-center text-4xl font-bold" data-aos="fade-right">Moi.</div>
       <div class="text-justify" data-aos="fade-left">
         <p>
-          Actuellement en <a class="lien" target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges,
-          je suis diplômé d'un <a class="lien" target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur.</a>
+          Actuellement en <a target="_blank" href="https://www.sciences.unilim.fr/tic/metiers-de-linformatique-conduite-de-projet-technologie-du-developpement-web/">Licence Professionnelle - Métiers de l'informatique : Conduite de projet - Technologie du développement web</a> à l’Université de Limoges, je suis diplômé d'un <a target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a>.<br>
         </p>
         <p class="mb-10 mt-4">
           Étudiant investie et dynamique, je possède une très bonne connaissance du monde du web et des nouvelles technologies.
