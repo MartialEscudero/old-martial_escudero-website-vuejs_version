@@ -11,8 +11,8 @@
           <router-link class="btn text-white font-bold py-2 px-4 rounded-full mt-14" tag="button" to="/cv">Voir mon CV</router-link>
         </div>
         <p class="mt-14" data-aos="fade-up">
-          Actuellement en <a target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a> à l’Université de Limoges, je suis diplômé d'un <a target="_blank" href="http://www.lyceecaraminot.fr/">Baccalauréat Scientifique option et spécialité Sciences de l'Ingénieur</a>.<br>
-          Vous pouvez trouver certains de mes projets sous l'entité <a target="_blank" href="https://www.behance.net/pureproduction/">"Pure. Production"</a>.
+          Actuellement en <a target="_blank" href="https://www.sciences.unilim.fr/tic/metiers-de-linformatique-conduite-de-projet-technologie-du-developpement-web/">Licence Professionnelle - Métiers de l'informatique : Conduite de projet - Technologie du développement web</a> à l’Université de Limoges, je suis diplômé d'un <a target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a>.<br>
+          Vous pouvez trouver certains de mes projets sous l'entité <a target="_blank" href="https://www.instagram.com/le4cent4/">"4cent4"</a>.
         </p>
         <p class="mt-14" data-aos="fade-up">
           Passionné et autodidacte depuis toujours, je saurais m'investir et vous accompagnez dans vos projets.
