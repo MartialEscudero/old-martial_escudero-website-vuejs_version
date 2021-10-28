@@ -8,8 +8,12 @@
       <div class="text-justify" data-aos="fade-left">
         <p>
           Actuellement en <a target="_blank" href="https://www.sciences.unilim.fr/tic/metiers-de-linformatique-conduite-de-projet-technologie-du-developpement-web/">Licence Professionnelle - Métiers de l'informatique : Conduite de projet - Technologie du développement web</a> à l’Université de Limoges, je suis diplômé d'un <a target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a>.<br>
+          <br>
+          Vous pouvez trouver certains de mes projets <b>actuels</b> sous l'entité <a target="_blank" href="https://www.instagram.com/le4cent4/">"4cent4"</a>.<br>
+          Mes anciens projets audiovisuels sous l'entité <a target="_blank" href="https://www.behance.net/pureproduction">"Pure. Production"</a>.        
         </p>
-        <p class="mb-10 mt-4">
+        <br>
+        <p class="mb-10">
           Étudiant investie et dynamique, je possède une très bonne connaissance du monde du web et des nouvelles technologies.
         </p>
         <div id="wrapper">
@@ -26,13 +30,31 @@
       <div class="text-center text-4xl font-bold" data-aos="fade-right">Diplôme.</div>
       <div class="text-justify" data-aos="fade-left">
         <article>
+          <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Université de Limoges, Faculté Sciences Et Techniques</span> | Licence Pro</p>
+          <div class="italic mt-2 mb-5 text-xs"><span class="date">SEPTEMBRE 2021 - LIMOGES</span></div>
+          <p class="text-sm">
+            Licence Professionnelle – Métiers de l'informatique : Conduite de Projet - Développement Web.
+          </p>
+        </article>
+        <article class="mt-10">
+          <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">MOOC Gestion de projet</span></p>
+          <div class="italic mt-2 mb-5 text-xs"><span class="date">OCTOBRE 2021</span></div>
+          <p class="text-sm">
+            MOOC Gestion de projet - Spécialisation Management d'Équipe Projet & Spécialisation Outils et Applications Web pour la gestion de projet.<br><br>
+            <b>Dans le cadre de ma Licence Professionnelle.</b>
+          </p>
+        </article>
+        <article class="mt-10">
           <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Université de Limoges, Faculté Sciences Et Techniques</span> | DEUST</p>
-          <div class="italic mt-2 mb-5 text-xs"><span class="date">SEPTEMBRE 2019 - LIMOGES</span></div>
-          <p class="text-sm">Préparation du diplôme DEUST Webmaster & Métiers de l’Internet.</p>
+          <div class="italic mt-2 mb-5 text-xs"><span class="date">SEPTEMBRE 2019 / JUILLET 2021 - LIMOGES</span></div>
+          <p class="text-sm">
+            DEUST – Webmaster & Métiers de l’Internet : Parcours Développement Web et Plateformes Mobiles.<br><br>
+            <b>Mention Bien.</b>
+          </p>
         </article>
         <article class="mt-10">
           <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Lycée Pierre Caraminot</span> | Baccalauréat</p>
-          <div class="italic mt-2 mb-5 text-xs"><span class="date">JUILLET 2019 - ÉGLETONS</span></div>
+          <div class="italic mt-2 mb-5 text-xs"><span class="date">JUILLET 2019 • ÉGLETONS</span></div>
           <p class="text-sm">Baccalauréat Scientifique spécialité et option Sciences de l’Ingénieur.</p>
         </article>
       </div>
@@ -41,7 +63,7 @@
       <div class="text-center text-4xl font-bold" data-aos="fade-right">Expériences.</div>
       <div class="text-justify" data-aos="fade-left">
         <article>
-          <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Site Web Personnel</span> | Cadre Personnel</p>
+          <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Site Web Personnel V2</span> | Cadre Personnel</p>
           <div class="italic mt-2 mb-5 text-xs"><span class="date">AVRIL 2021</span></div>
           <p class="text-sm">Refonte totale de mon site www.martialescudero.com, développement en utilisant : Vue.js, VueX, Node.js, Strapi et Tailwind CSS.</p>
         </article>
