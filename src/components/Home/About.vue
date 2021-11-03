@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-32 h-screen">
+  <div class="mt-32 h-screen tablet">
     <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-16" data-aos="fade-right">
       À Propos
     </h1>
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto mt-32 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden" data-aos="fade-up">
+      <div class="mx-auto mt-32 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden tablet-logo" data-aos="fade-up">
         <img class="lg:w-50" src="../../assets/img/icon.png">
       </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="xl:mt-44 md:mt-36 sm:mt-28 h-full sm:mb-7">
+  <div class="xl:mt-44 md:mt-36 sm:mt-28 h-full sm:mb-7 tablet">
     <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-2" data-aos="fade-right">
       Portfolio
     </h1>

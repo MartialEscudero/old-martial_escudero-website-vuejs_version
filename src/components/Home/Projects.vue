@@ -1,5 +1,5 @@
 <template>
-  <div class="xl:mt-32 sm:mt-60">
+  <div class="xl:mt-32 sm:mt-60 tablet">
     <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-20" data-aos="fade-right">
       Derniers projets
     </h1>
