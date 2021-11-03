@@ -8,11 +8,6 @@ import VueMeta from 'vue-meta'
 import VueMarkdown from 'vue-markdown';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import VueGtag from "vue-gtag";
-
-Vue.use(VueGtag, {
-  config: { id: "UA-164716890-1" }
-});
 
 AOS.init({
   duration: 1100,

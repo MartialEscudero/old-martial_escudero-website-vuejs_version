@@ -3,6 +3,11 @@
     <div class="m-auto text-md xl:mx-auto">
       <div id="labo">
         <p class="text-center elementlabo" data-aos="fade-up">
+          <a target="_blank" href="https://www.link.martialescudero.com" class="effect labotext6 xl:text-6xl sm:text-4xl">
+            Social Media Sharing Link
+          </a>
+        </p> 
+        <p class="text-center elementlabo" data-aos="fade-up">
           <router-link target="_blank" to="/contact" class="effect labotext5 xl:text-6xl sm:text-4xl">
             Contact Form Single
           </router-link>
@@ -133,6 +138,19 @@ p a {
   -webkit-text-fill-color: transparent;
   -webkit-animation: shine 3.5s linear infinite;
           animation: shine 3.5s linear infinite;
+}
+
+.labotext6 {
+  text-align: center;
+	background-image: linear-gradient(to right, rgb(146, 68, 68), #ff4444, #ff0000, #ff4444, rgb(146, 68, 68));
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  letter-spacing: 1px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: shine 3s linear infinite;
+          animation: shine 3s linear infinite;
 }
 
 @-webkit-keyframes shine {
