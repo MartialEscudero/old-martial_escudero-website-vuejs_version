@@ -88,7 +88,8 @@
 
 @media screen and (max-width: 1300px) and (min-width: 1000px) {
   .tablet {
-    margin: 6rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
   }
 
   .tablet-logo {
