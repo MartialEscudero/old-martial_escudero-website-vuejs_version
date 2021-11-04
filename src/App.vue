@@ -51,7 +51,7 @@
       </div>
     </div>
     <router-view/>
-    <div v-if="getUrl() == '/#/'" id="footer-scroll" v-scroll-to="{el: '#element',offset: -60,duration: 800}">
+    <div v-if="getUrl() == '/#/'" id="footer-scroll" v-scroll-to="{el: '#element',offset: -50,duration: 800}">
       <div class="scroll-downs">
         <div class="mousey">
           <div class="scroller"></div>
