@@ -51,7 +51,7 @@
       </div>
     </div>
     <router-view/>
-    <div v-if="getUrl() == '/#/'" id="footer-scroll">
+    <div v-if="getUrl() == '/#/'" id="footer-scroll" v-scroll-to="{el: '#element',offset: -60,duration: 800}">
       <div class="scroll-downs">
         <div class="mousey">
           <div class="scroller"></div>
@@ -273,6 +273,7 @@ body::-webkit-scrollbar {
   height: 55px;
 }
 .mousey {
+  cursor: pointer;
   width: 3px;
   padding: 10px 15px;
   height: 35px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="fxl:mt-44 md:mt-36 sm:mt-28 sm:mb-7">
+  <div class="fxl:mt-44 md:mt-36 sm:mt-28 sm:mb-7 tablet">
     <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-2" data-aos="fade-right">
       CV
     </h1>

@@ -65,3 +65,34 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 640px) {
+  #markdown h1 {
+    font-size: 1.5rem;
+    color: #93C5FD
+  }
+  
+  #markdown h2 {
+    font-size: 1rem;
+  }
+  
+  #markdown iframe {
+    width: 311px;
+    height: 175px;
+  }
+
+  #markdown img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1000px) {
+  .tablet {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  .tablet-logo {
+    padding-top: 10rem;
+  }
+}

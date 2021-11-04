@@ -1,9 +1,9 @@
 <template>
-  <div class="xl:mt-32 sm:mt-60">
+  <div class="lg:mt-32 md:mt-0 sm:mt-52 tablet">
     <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-20" data-aos="fade-right">
       Derniers projets
     </h1>
-    <div class="container mx-auto grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-24 mt-32">
+    <div class="container mx-auto grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-24 md:mt-32 sm:-mt-2">
       <div class="mx-auto card" v-for="projet in projets.slice(0, 4)" :key="projet.item" data-aos="fade-up">
         <router-link :to="'/projet/'+projet.Slug">
           <img class="img-fluid" :src="projet.Image[0].url">

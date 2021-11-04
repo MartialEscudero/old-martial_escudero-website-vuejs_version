@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-32 h-screen">
+  <div class="mt-32 h-screen tablet" id="element">
     <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-16" data-aos="fade-right">
       À Propos
     </h1>
-    <div class="container mx-auto grid xl:grid-cols-2 lg:grid-cols-1 gap-4 mt-32">
+    <div class="container mx-auto grid xl:grid-cols-2 lg:grid-cols-1 gap-4 lg:mt-32 sm:-mt-10">
       <div class="mx-auto text-justify xl:m-0 sm:ml-5 sm:mr-5">
         <h2 class="text-3xl font-bold mt-10" data-aos="fade-up">Martial Escudero</h2>
         <h3 class="text-2xl" data-aos="fade-up">{{age}} ans</h3>
@@ -19,7 +19,7 @@
         <p class="mt-14" data-aos="fade-up">
           Passionné et autodidacte depuis toujours, je saurais m'investir et vous accompagnez dans vos projets.
         </p>
-        <div id="social" class="flex mt-16" data-aos="fade-up">
+        <div id="social" class="flex mt-16 md:ml-0 sm:ml-14" data-aos="fade-up">
           <div class="xl:mr-7">
             <a class="flex-auto" href="https://www.linkedin.com/in/martial-escudero/" target="_blank">
                 <svg class="svg-icon" viewBox="0 0 23.273 23.273">
@@ -50,7 +50,7 @@
           </div>
         </div>
       </div>
-      <div class="mx-auto mt-32 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden" data-aos="fade-up">
+      <div class="mx-auto mt-32 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden tablet-logo" data-aos="fade-up">
         <img class="lg:w-50" src="../../assets/img/icon.png">
       </div>
     </div>
