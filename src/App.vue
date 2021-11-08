@@ -1,5 +1,5 @@
 <template>
-  <div data-aos="fade">
+  <div data-aos="fade" id="top">
     <div id="nav-left" class="hidden">
       <div class="flex h-screen">
         <div class="m-auto text-4xl font-bold">
@@ -36,7 +36,10 @@
     </div>
     <div id="nav" class="transparent">
       <div class="transparent flex flex-no-shrink items-stretch h-12">
-        <a href="/">
+        <a class="cursor-pointer" v-if="getUrl() == '/#/'" v-scroll-to="{el: '#top',duration: 1000}">
+          <img class="logo lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
+        </a>
+        <a v-else href="/">
           <img class="logo lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
         </a>
       </div>
@@ -51,7 +54,7 @@
       </div>
     </div>
     <router-view/>
-    <div v-if="getUrl() == '/#/'" id="footer-scroll" v-scroll-to="{el: '#element',offset: -50,duration: 800}">
+    <div v-if="getUrl() == '/#/'" id="footer-scroll" v-scroll-to="{el: '#about',offset: -50,duration: 800}">
       <div class="scroll-downs">
         <div class="mousey">
           <div class="scroller"></div>
