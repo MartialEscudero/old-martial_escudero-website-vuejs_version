@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-32 h-screen tablet" id="element">
+  <div class="mt-32 h-screen tablet" id="about">
     <h1 class="container mx-auto lg:text-left sm:text-center text-5xl mb-16" data-aos="fade-right">
       À Propos
     </h1>
