@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Welcome />
+    <Hello />
     <About />
     <Projects />
     <Contactme />
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Welcome from '@/components/Home/Welcome.vue'
+import Hello from '@/components/Home/Hello.vue'
 import About from '@/components/Home/About.vue'
 import Projects from '@/components/Home/Projects.vue'
 import Contactme from '@/components/Home/Contactme.vue'
@@ -21,7 +21,7 @@ export default {
   },
   name: 'Home',
   components: {
-    Welcome,
+    Hello,
     About,
     Projects,
     Contactme,
