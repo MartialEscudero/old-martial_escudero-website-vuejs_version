@@ -3,7 +3,7 @@
     <div class="m-auto text-md xl:mx-auto">
       <div id="labo">
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="https://www.link.martialescudero.com" class="effect labotext6 xl:text-6xl sm:text-4xl">
+          <a target="_blank" href="https://link.martialescudero.com" class="effect labotext6 xl:text-6xl sm:text-4xl">
             Social Media Sharing Link
           </a>
         </p> 
