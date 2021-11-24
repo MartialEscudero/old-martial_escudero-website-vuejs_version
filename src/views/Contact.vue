@@ -1,25 +1,25 @@
 <template>
   <div class="flex h-screen">
     <div class="m-auto text-md xl:mx-auto">
-      <form v-show="displayForm == true" id="contact-form" name="contact-form" @submit.prevent="sendEmail">
+      <form v-show="displayForm == true" id="contact-form" name="contact-form" @submit.prevent="sendEmail" onkeydown="return event.key != 'Enter';">
         <p class="xl:text-lg sm:text-xs msgerror"></p>
         <div v-show="displayName == true">
-          <input v-model="name" class="input xl:text-4xl sm:text-lg" placeholder="Nom" type="text" name="user_name" data-aos="fade-up">
+          <input v-model="name" @keydown.enter="setName()" class="input xl:text-4xl sm:text-lg" placeholder="Nom" type="text" name="user_name" data-aos="fade-up">
           <div class="flex mt-10">
             <a @click="setName()" class="m-auto xl:text-2xl" data-aos="fade-up">Suivant</a>
           </div>
           <div class="text-gray-500" data-aos="fade-up">
-            <p class="contact text-center xl:text-sm sm:text-xs">ou via <a class="font-bold" href="mailto:contact@martialescudero.com">contact@martialescudero.com</a></p>
+            <p class="contact text-center xl:text-sm sm:text-xs">ou via <a class="font-bold" href="mailto:martial.escudero@gmail.com">martial.escudero@gmail.com</a></p>
           </div>
         </div>
         <div v-show="displayEmail == true">
-          <input placeholder="E-mail" class="input xl:text-4xl sm:text-lg" v-model="email" type="text" name="user_email">
+          <input placeholder="E-mail" @keydown.enter="setEmail()" class="input xl:text-4xl sm:text-lg" v-model="email" type="email" name="user_email">
           <div class="flex mt-10">
             <a @click="setEmail()" class="m-auto xl:text-2xl">Suivant</a>
           </div>
         </div>
         <div v-show="displaySubject == true">
-          <input placeholder="Sujet" class="input xl:text-4xl sm:text-lg" v-model="subject" name="user_subject">
+          <input placeholder="Sujet" @keydown.enter="setSubject()" class="input xl:text-4xl sm:text-lg" v-model="subject" name="user_subject">
           <div class="flex mt-10">
             <a @click="setSubject()" class="m-auto xl:text-2xl">Suivant</a>
           </div>
@@ -104,7 +104,7 @@ export default {
   methods: {
     sendEmail(e) {
       this.displayLoading = true
-      emailjs.sendForm('service_0ypnj9p', 'template_ddhecpn', e.target, 'user_PFnEAgnCIgPitvseq0QYE')
+      emailjs.sendForm('service_ra48wft', 'template_ddhecpn', e.target, 'user_PFnEAgnCIgPitvseq0QYE')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
             this.displayForm = false
