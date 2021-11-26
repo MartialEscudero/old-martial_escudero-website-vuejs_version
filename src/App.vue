@@ -36,7 +36,7 @@
     </div>
     <div id="nav" class="transparent">
       <div class="transparent flex flex-no-shrink items-stretch h-12">
-        <a class="cursor-pointer" v-if="getUrl() == '/#/'" v-scroll-to="{el: '#top',duration: 1000}">
+        <a class="cursor-pointer" v-if="getUrl()" v-scroll-to="{el: '#top',duration: 1000}">
           <img class="logo lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
         </a>
         <a v-else href="/">
@@ -54,14 +54,14 @@
       </div>
     </div>
     <router-view/>
-    <div v-if="getUrl() == '/#/'" id="footer-scroll" v-scroll-to="{el: '#about',offset: -50,duration: 800}">
+    <div v-if="getUrl()" id="footer-scroll" v-scroll-to="{el: '#about',offset: -50,duration: 800}">
       <div class="scroll-downs">
         <div class="mousey">
           <div class="scroller"></div>
         </div>
       </div>
     </div>
-    <footer v-if="getUrl() == '/#/'" class="mb-4">
+    <footer v-if="getUrl()" class="mb-4">
       <div class="text-center text-xs">
         &copy; 2020 - {{date}} Martial Escudero. Tous droits réservés.
       </div>
@@ -96,7 +96,7 @@ export default {
       return new Date().getFullYear()
     },
     getUrl(){
-      return window.location.href.substring(window.location.href.length-3)
+      return "Home" == this.$route.name
     },
     ...mapActions(['getProjets']),
   },
