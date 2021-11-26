@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import './assets/tailwind.css'
+import './assets/css/tailwind.css'
 import { init } from 'emailjs-com';
 import VueMeta from 'vue-meta'
 import VueMarkdown from 'vue-markdown';
