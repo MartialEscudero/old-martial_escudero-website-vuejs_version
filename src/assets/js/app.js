@@ -82,14 +82,16 @@ $(document).ready(function(){
     $("#nav-right").slideToggle();
   });
 
-
+  // Animation mouse
   $(window).scroll(function() {
     if ($(window).scrollTop() >= 300) {
-        $('#footer-scroll').addClass('hidden');
+        $('#footer-scroll').addClass('hiddenMouse');
+        $('#footer-scroll').removeClass('activeMouse');
     }
     if ($(window).scrollTop() <= 300) {
-      $('#footer-scroll').removeClass('hidden');
-  }
-})
+      $('#footer-scroll').removeClass('hiddenMouse');
+      $('#footer-scroll').addClass('activeMouse');
+    }
+  })
   
 });

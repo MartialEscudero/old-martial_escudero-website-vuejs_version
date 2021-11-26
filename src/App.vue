@@ -114,6 +114,16 @@ export default {
 
 @import './assets/css/style.css';
 
+.hiddenMouse {
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+
+.activeMouse {
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+
 * {
   font-family: 'Poppins';
 }
