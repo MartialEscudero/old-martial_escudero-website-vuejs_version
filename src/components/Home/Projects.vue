@@ -8,7 +8,7 @@
         <router-link :to="'/projet/'+projet.Slug">
           <img class="img-fluid" :src="projet.Image[0].url">
           <div class="p-5">
-            <h2 class="xl:text-2xl sm:text-l mt-1">{{projet.Titre}}</h2>
+            <h2 class="xl:text-2xl md:text-base sm:text-l mt-1 textSize">{{projet.Titre}}</h2>
             <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">{{projet.type.Type}}</h3>
           </div>
         </router-link>
@@ -65,6 +65,12 @@ export default {
 @media screen and (max-width: 640px) {
   .card {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1000px) {
+  .textSize {
+    font-size: 18px;
   }
 }
 </style>

@@ -86,10 +86,10 @@
     }
   }
   
-  @media screen and (max-width: 1300px) and (min-width: 1000px) {
+  @media screen and (max-width: 1600px) and (min-width: 1000px) {
     .tablet {
-      margin-left: 6rem;
-      margin-right: 6rem;
+      margin-left: 11rem;
+      margin-right: 11rem;
     }
   
     .tablet-logo {
