@@ -9,6 +9,7 @@ export default new Vuex.Store ({
   state: {
     projets: [],
     projet: [],
+    cv: [],
   },
   mutations: {
     setProjet(state, args) {
@@ -19,7 +20,10 @@ export default new Vuex.Store ({
       for (let index = 0; index < state.projet.Techno.length; index++) {
         state.projet.Techno = state.projet.Techno.replace(',',' |')
       }
-    }
+    },
+    setCv(state, args) {
+        state.cv = args[0]
+      },
   },
   actions: {
     getProjets({commit}) {
@@ -41,10 +45,20 @@ export default new Vuex.Store ({
         console.log(err)
         router.push({path: '/404'})
       })
-    }
+    },
+    getCv({commit}) {
+        axios.get('https://strapi-martialescudero.herokuapp.com/links?_id_eq=617ab714fb54e100161dae31')
+        .then( (res) => {
+          commit('setCv', res.data)
+        })
+        .catch( (err) => {
+          console.log(err)
+        })
+      },
   },
   getters: {
     projets: state => state.projets,
-    projet: state => state.projet
+    projet: state => state.projet,
+    cv: state => state.cv
   }
 })
