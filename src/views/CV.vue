@@ -17,7 +17,7 @@
           Étudiant investie et dynamique, je possède une très bonne connaissance du monde du web et des nouvelles technologies.
         </p>
         <div id="wrapper">
-          <a class="rounded-full" target="_blank" href="/assets/docs/CV - Martial ESCUDERO.pdf">
+          <a class="rounded-full" target="_blank" :href="cv.link">
             <button class="btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
               <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
               <span>Télécharger mon CV</span>
@@ -214,6 +214,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
   data: () => ({
     languages: [
@@ -245,6 +246,9 @@ export default {
       {name: "Figma", pourcent: 70 },
     ]
   }),
+  computed: {
+    ...mapGetters(['cv']),
+  }, 
   metaInfo () {
     return {
       title : 'Martial Escudero | Mon CV',

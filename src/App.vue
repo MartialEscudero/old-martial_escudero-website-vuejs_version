@@ -99,9 +99,11 @@ export default {
       return "Home" == this.$route.name
     },
     ...mapActions(['getProjets']),
+    ...mapActions(['getCv']),
   },
   mounted() {
-    this.getProjets()
+    this.getProjets(),
+    this.getCv(),
     this.date = this.getDate()
     window.scroll(0, 0)
   }
