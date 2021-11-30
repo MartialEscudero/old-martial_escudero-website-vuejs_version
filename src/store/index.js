@@ -39,7 +39,7 @@ export default new Vuex.Store ({
     },
     getProjetSelect({state, commit}, item) {
       state.projet = []
-      axios.get(strapi +'/projets?Slug_eq=' + item)
+      axios.get(strapi +'projets?Slug_eq=' + item)
       .then( (res) => {
         commit('setProjetSelect', res.data)
       })
