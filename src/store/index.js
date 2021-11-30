@@ -5,6 +5,8 @@ import router from '../router'
 
 Vue.use(Vuex)
 
+const strapi = "https://strapi.martialescudero.com/"
+
 export default new Vuex.Store ({
   state: {
     projets: [],
@@ -27,7 +29,7 @@ export default new Vuex.Store ({
   },
   actions: {
     getProjets({commit}) {
-      axios.get('https://strapi-martialescudero.herokuapp.com/projets?ShowIt_eq=true')
+      axios.get(strapi + 'projets?ShowIt_eq=true')
       .then( (res) => {
         commit('setProjet', res.data)
       })
@@ -37,7 +39,7 @@ export default new Vuex.Store ({
     },
     getProjetSelect({state, commit}, item) {
       state.projet = []
-      axios.get('https://strapi-martialescudero.herokuapp.com/projets?Slug_eq='+item)
+      axios.get(strapi +'/projets?Slug_eq=' + item)
       .then( (res) => {
         commit('setProjetSelect', res.data)
       })
@@ -47,7 +49,7 @@ export default new Vuex.Store ({
       })
     },
     getCv({commit}) {
-        axios.get('https://strapi-martialescudero.herokuapp.com/links?_id_eq=617ab714fb54e100161dae31')
+        axios.get(strapi + 'links?_id_eq=617ab714fb54e100161dae31')
         .then( (res) => {
           commit('setCv', res.data)
         })
