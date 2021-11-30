@@ -3,12 +3,12 @@
     <div class="container mx-auto grid grid-cols-1 gap-4 sm:mt-32">
       <div class="xl:mr-10 sm:mr-4 sm:ml-4">
         <h1 class="text-center xl:text-4xl sm:text-2xl" data-aos="fade-down">{{projet.Titre}}</h1>
-        <h2 class="text-center xl:text-xl font-bold text-blue-300" v-for="type in projet" :key="type.item" data-aos="fade-down">{{type.Type}}</h2>
+        <h2 class="text-center xl:text-xl text-blue-300" v-for="type in projet" :key="type.item" data-aos="fade-down">{{type.Type}}</h2>
         <h3 class="text-center text-sm mt-5 mb-10" data-aos="fade-down">{{projet.Techno}}</h3>
         <div v-for="type in projet" :key="type.item" class="mt-16" data-aos="fade-up">
           <div v-if="type.Type == 'Développement Web'">
             <figure class="effect-sadie">
-              <img :src="projet.Image[0].url"/>
+              <img :src="projet.Image[0].formats.small.url"/>
               <figcaption>
                 <h2 class="mr-3 xl:text-2xl sm:text-xl">Cliquez ici <span class="pl-3">pour découvrir</span></h2>
                 <a :href="projet.Url" target="_blank"></a>

@@ -8,6 +8,7 @@ import VueMeta from 'vue-meta'
 import VueMarkdown from 'vue-markdown';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import './assets/css/style.css';
 
 AOS.init({
   duration: 1100,
