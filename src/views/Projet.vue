@@ -11,7 +11,7 @@
               <img :src="projet.Image[0].formats.small.url"/>
               <figcaption>
                 <h2 class="mr-3 xl:text-2xl sm:text-xl">Cliquez ici <span class="pl-3">pour découvrir</span></h2>
-                <a :href="projet.Url" target="_blank"></a>
+                <a :href="projet.Url" rel="noopener" target="_blank"></a>
               </figcaption>			
             </figure>
           </div>
