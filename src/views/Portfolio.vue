@@ -6,7 +6,7 @@
     <div class="container mx-auto grid xl:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
       <div class="mx-auto card" v-for="projet in projets" :key="projet.item" data-aos="fade-up">
         <router-link :to="'projet/'+projet.Slug">
-          <img class="img-fluid" :src="projet.Image[0].formats.small.url">
+          <img lt="Image illustration vers le projet" class="img-fluid" :src="projet.Image[0].formats.small.url">
           <div class="p-5">
             <h2 class="xl:text-2xl sm:text-l mt-1">{{projet.Titre}}</h2>
             <h3 class="xl:text-sm sm:text-xs text-blue-300 font-bold mt-2">{{projet.type.Type}}</h3>

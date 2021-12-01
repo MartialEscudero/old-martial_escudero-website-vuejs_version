@@ -3,32 +3,32 @@
     <div class="m-auto text-md xl:mx-auto">
       <div id="labo">
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="https://link.martialescudero.com" class="effect labotext6 xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="https://link.martialescudero.com" class="effect labotext6 xl:text-6xl sm:text-4xl">
             Social Media Sharing Link
           </a>
         </p> 
         <p class="text-center elementlabo" data-aos="fade-up">
-          <router-link target="_blank" to="/contact" class="effect labotext5 xl:text-6xl sm:text-4xl">
+          <router-link rel="noopener" target="_blank" to="/contact" class="effect labotext5 xl:text-6xl sm:text-4xl">
             Contact Form Single
           </router-link>
         </p>       
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="/assets/html/meteo.html" class="effect labotext4 xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="/assets/html/meteo.html" class="effect labotext4 xl:text-6xl sm:text-4xl">
             API Météo
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="/assets/html/hexaclock.html" class="effect labotext3 xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="/assets/html/hexaclock.html" class="effect labotext3 xl:text-6xl sm:text-4xl">
             HexaClock
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="/assets/html/color-palette-selector.html" class="effect labotext2 xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="/assets/html/color-palette-selector.html" class="effect labotext2 xl:text-6xl sm:text-4xl">
             Color Palette Selector
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a target="_blank" href="/assets/html/concept-devis.html" class="effect labotext xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="/assets/html/concept-devis.html" class="effect labotext xl:text-6xl sm:text-4xl">
             Concept Devis
           </a>
         </p>
