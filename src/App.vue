@@ -37,10 +37,10 @@
     <div id="nav" class="transparent">
       <div class="transparent flex flex-no-shrink items-stretch h-12">
         <a class="cursor-pointer" v-if="getUrl()" v-scroll-to="{el: '#top',duration: 1000}">
-          <img class="logo lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
+          <img alt="Logo Martial Escudero" class="logo lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
         </a>
         <a v-else href="/">
-          <img class="logo lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
+          <img alt="Logo Martial Escudero" class="logo lg:w-20 md:w-20 sm:w-14" src="./assets/img/icon.png">
         </a>
       </div>
       <div class="transparent flex items-stretch flex-no-shrink flex-grow">

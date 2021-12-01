@@ -51,7 +51,7 @@
         </div>
       </div>
       <div class="mx-auto mt-32 xl:ml-72 xl:block lg:hidden md:hidden sm:hidden tablet-logo" data-aos="fade-up">
-        <img class="lg:w-50" src="../../assets/img/icon.png">
+        <img alt="Logo Martial Escudero" class="lg:w-50" src="../../assets/img/icon.png">
       </div>
     </div>
   </div>
