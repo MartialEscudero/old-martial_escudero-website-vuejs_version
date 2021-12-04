@@ -54,7 +54,7 @@
       </div>
     </div>
     <router-view/>
-    <div v-if="getUrl()" id="footer-scroll" v-scroll-to="{el: '#about',offset: -50,duration: 800}">
+    <div v-if="getUrl()" id="footer-scroll" v-scroll-to="{el: '#about',offset: -140,duration: 800}">
       <div class="scroll-downs">
         <div class="mousey">
           <div class="scroller"></div>
@@ -87,7 +87,7 @@ export default {
       home: "Home, ici ça veut dire accueil en anglais. Du coup, c'est la page d'accueil.",
       about: "Si vous avez des questions sur mon profil ou mon parcours, vous trouverez ici toutes les réponses.",
       portfolio: "Sur mon Portfolio, vous retrouvez différents projets que j'ai pu réaliser dans le domaine du Développement Web, du Graphisme ou encore de l'Audiovisuel.",
-      contact: "Si vous avez une question, un projet ou autre, vous pouvez compléter ce formulaire de contact (allez le voir il est tout beau) ou contactez moi à l'adresse suivante : contact@martialescudero.com",
+      contact: "Si vous avez une question, un projet ou autre, vous pouvez compléter ce formulaire de contact (allez le voir il est tout beau) ou contactez-moi à l'adresse suivante : martialescudero.com@gmail.com",
       labo: "Le Labo est un espace de mon site où on y retrouve différents mini-projets de développement web et web design que je vous invite à découvrir.",
     }
   }),
