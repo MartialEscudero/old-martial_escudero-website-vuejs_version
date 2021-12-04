@@ -186,6 +186,29 @@
           </section>
         </article>
         <article class="text-justify mt-10">
+          <h1 class="text-left font-bold text-2xl">Autres</h1>
+          <hr class="my-6">
+          <section v-for="autre in autres" :key="autre.item">
+            <div class="relative pt-1">
+              <div class="flex mb-2 items-center justify-between">
+                <div>
+                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
+                    {{autre.name}}
+                  </span>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-semibold inline-block">
+                    {{autre.pourcent}}%
+                  </span>
+                </div>
+              </div>
+              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
+                <div :style="'width:'+autre.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <article class="text-justify mt-10">
           <h1 class="text-left font-bold text-2xl">Design</h1>
           <hr class="my-6">
           <section v-for="design in designs" :key="design.item">
@@ -223,27 +246,33 @@ export default {
       {name: "JavaScript", pourcent: 70 },
       {name: "jQuery", pourcent: 70 },
       {name: "Ajax", pourcent: 60 },
-      {name: "PHP", pourcent: 50 },
+      {name: "PHP", pourcent: 60 },
       {name: "MySQL / PhpMyAdmin", pourcent: 50 },
-      {name: "XML", pourcent: 50 },
     ],
     frameworks: [
       {name: "Vue.js", pourcent: 70 },
-      {name: "VueX", pourcent: 80 },
+      {name: "Alpine.js", pourcent: 60 },
       {name: "Vuetify", pourcent: 90 },
       {name: "Tailwind CSS", pourcent: 90 },
       {name: "Bootstrap", pourcent: 90 },
     ],
     cmss: [
       {name: "WordPress", pourcent: 85 },
-      {name: "Magento", pourcent: 50 },
+      {name: "Strapi", pourcent: 85 },
+    ],
+    autres: [
+      {name: "Vercel", pourcent: 85 },
+      {name: "Netlify", pourcent: 75 },
+      {name: "Vitejs", pourcent: 75 },
+      {name: "Vue CLI", pourcent: 75 },
+      
     ],
     designs: [
       {name: "Adobe Premiere Pro", pourcent: 85 },
+      {name: "Figma", pourcent: 85 },
       {name: "Adobe Photoshop", pourcent: 80 },
       {name: "Adobe InDesign", pourcent: 80 },
       {name: "Adobe XD", pourcent: 80 },
-      {name: "Figma", pourcent: 70 },
     ]
   }),
   computed: {
