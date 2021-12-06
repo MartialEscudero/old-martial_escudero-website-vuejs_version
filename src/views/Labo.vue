@@ -41,7 +41,20 @@
 export default {
 metaInfo () {
     return {
-      title : 'Martial Escudero | Le Labo',
+      title : 'Le Labo | Martial Escudero',
+      meta: [
+        { property: 'description', content: 'Le Labo, tests de différents projets - Martial Escudero 21 ans – Étudiant & Développeur Web' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://www.martialescudero.com' },
+        { property: 'og:title', content: 'Le Labo - Martial Escudero | Étudiant - Développeur Web'},
+        { property: 'og:description', content: 'Le Labo, tests de différents projets - Martial Escudero 21 ans – Étudiant & Développeur Web' },
+        { property: 'og:image', content: 'https://res.cloudinary.com/do5ghqhjj/image/upload/v1638793628/martialescudero_838464f9ed.jpg' },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: 'https://www.martialescudero.com' },
+        { property: 'twitter:title', content: 'Le Labo - Martial Escudero | Étudiant - Développeur Web'},
+        { property: 'twitter:description', content: 'Le Labo, tests de différents projets - Martial Escudero 21 ans – Étudiant & Développeur Web' },
+        { property: 'twitter:image', content: 'https://res.cloudinary.com/do5ghqhjj/image/upload/v1638793628/martialescudero_838464f9ed.jpg' },
+      ]
     }
   },
 }
