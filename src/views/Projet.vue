@@ -30,17 +30,17 @@ export default {
     return {
       title : this.projet.Titre + ' | Martial Escudero',
       meta: [
-        { property: 'description', content: this.projet.Titre + ' - Martial Escudero 21 ans – Étudiant & Développeur Web' },
+        { property: 'description', content: this.projet.Titre + ' - Martial Escudero' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://www.martialescudero.com' },
-        { property: 'og:title', content: this.projet.Titre + ' - Martial Escudero | Étudiant - Développeur Web'},
-        { property: 'og:description', content: this.projet.Titre + ' - Martial Escudero 21 ans – Étudiant & Développeur Web' },
-        { property: 'og:image', content: 'https://res.cloudinary.com/do5ghqhjj/image/upload/v1638793628/martialescudero_838464f9ed.jpg' },
+        { property: 'og:title', content: this.projet.Titre + ' - Martial Escudero' },
+        { property: 'og:description', content: this.projet.Titre + ' - Martial Escudero' },
+        { property: 'og:image', content: this.projet.Image[0].formats.small.url },
         { property: 'twitter:card', content: 'summary_large_image' },
         { property: 'twitter:url', content: 'https://www.martialescudero.com' },
-        { property: 'twitter:title', content: this.projet.Titre + ' - Martial Escudero | Étudiant - Développeur Web'},
-        { property: 'twitter:description', content: this.projet.Titre + ' - Martial Escudero 21 ans – Étudiant & Développeur Web' },
-        { property: 'twitter:image', content: 'https://res.cloudinary.com/do5ghqhjj/image/upload/v1638793628/martialescudero_838464f9ed.jpg' },
+        { property: 'twitter:title', content: this.projet.Titre + ' - Martial Escudero'},
+        { property: 'twitter:description', content: this.projet.Titre + ' - Martial Escudero' },
+        { property: 'twitter:image', content: this.projet.Image[0].formats.small.url },
       ]
     }
   },
