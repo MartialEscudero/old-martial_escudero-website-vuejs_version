@@ -18,7 +18,7 @@ export default {
     return {
       title : 'testMartial Escudero | Étudiant - Développeur Web',
       meta: [
-        { vmid: 'description', name: 'description', content: 'Martial Escudero 21 ans – Étudiant & Développeur Web – Site Portofolio de Martial Escudero' },
+        { name: 'description', content: 'Martial Escudero 21 ans – Étudiant & Développeur Web – Site Portofolio de Martial Escudero' },
         // { property: 'keywords', content: "Martial Escudero,Escudero Martial,Étudiant,Université de Limoges,Limoges,LPMI,DEUST,Webmaster & Métiers de l'Internet,Développeur Front-End,Développeur,Vidéaste,Graphisme" },
 
         // { property: 'og:type', content: 'website' },
