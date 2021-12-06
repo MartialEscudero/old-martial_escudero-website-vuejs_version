@@ -13,22 +13,22 @@
           </router-link>
         </p>       
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a rel="noopener" target="_blank" href="/assets/html/meteo.html" class="effect labotext4 xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="/labo/meteo.html" class="effect labotext4 xl:text-6xl sm:text-4xl">
             API Météo
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a rel="noopener" target="_blank" href="/assets/html/hexaclock.html" class="effect labotext3 xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="/labo/hexaclock.html" class="effect labotext3 xl:text-6xl sm:text-4xl">
             HexaClock
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a rel="noopener" target="_blank" href="/assets/html/color-palette-selector.html" class="effect labotext2 xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="/labo/color-palette-selector.html" class="effect labotext2 xl:text-6xl sm:text-4xl">
             Color Palette Selector
           </a>
         </p>
         <p class="text-center elementlabo" data-aos="fade-up">
-          <a rel="noopener" target="_blank" href="/assets/html/concept-devis.html" class="effect labotext xl:text-6xl sm:text-4xl">
+          <a rel="noopener" target="_blank" href="/labo/concept-devis.html" class="effect labotext xl:text-6xl sm:text-4xl">
             Concept Devis
           </a>
         </p>
@@ -41,7 +41,20 @@
 export default {
 metaInfo () {
     return {
-      title : 'Martial Escudero | Le Labo',
+      title : 'Le Labo | Martial Escudero',
+      meta: [
+        { property: 'description', content: 'Le Labo, tests de différents projets - Martial Escudero 21 ans – Étudiant & Développeur Web' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://www.martialescudero.com' },
+        { property: 'og:title', content: 'Le Labo - Martial Escudero | Étudiant - Développeur Web'},
+        { property: 'og:description', content: 'Le Labo, tests de différents projets - Martial Escudero 21 ans – Étudiant & Développeur Web' },
+        { property: 'og:image', content: 'https://res.cloudinary.com/do5ghqhjj/image/upload/v1638793628/martialescudero_838464f9ed.jpg' },
+        { property: 'twitter:card', content: 'summary_large_image' },
+        { property: 'twitter:url', content: 'https://www.martialescudero.com' },
+        { property: 'twitter:title', content: 'Le Labo - Martial Escudero | Étudiant - Développeur Web'},
+        { property: 'twitter:description', content: 'Le Labo, tests de différents projets - Martial Escudero 21 ans – Étudiant & Développeur Web' },
+        { property: 'twitter:image', content: 'https://res.cloudinary.com/do5ghqhjj/image/upload/v1638793628/martialescudero_838464f9ed.jpg' },
+      ]
     }
   },
 }
