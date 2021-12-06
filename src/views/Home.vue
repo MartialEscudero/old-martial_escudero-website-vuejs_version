@@ -16,7 +16,7 @@ import Contactme from '@/components/Home/Contactme.vue'
 export default {
   metaInfo () {
     return {
-      title : 'testMartial Escudero | Étudiant - Développeur Web',
+      title : 'Martial Escudero | Étudiant - Développeur Web',
       meta: [
         { property: 'description', content: 'Martial Escudero 21 ans – Étudiant & Développeur Web – Site Portofolio de Martial Escudero' },
         { property: 'og:type', content: 'website' },
