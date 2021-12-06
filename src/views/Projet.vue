@@ -29,19 +29,6 @@ export default {
   metaInfo () {
     return {
       title : this.projet.Titre + ' | Martial Escudero',
-      meta: [
-        { vmid: 'description', property: 'description', content: this.projet.Titre + ' - Martial Escudero' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://www.martialescudero.com' },
-        { property: 'og:title', content: this.projet.Titre + ' - Martial Escudero' },
-        { property: 'og:description', content: this.projet.Titre + ' - Martial Escudero' },
-        { property: 'og:image', content: this.projet.Image[0].formats.small.url },
-        { property: 'twitter:card', content: 'summary_large_image' },
-        { property: 'twitter:url', content: 'https://www.martialescudero.com' },
-        { property: 'twitter:title', content: this.projet.Titre + ' - Martial Escudero'},
-        { property: 'twitter:description', content: this.projet.Titre + ' - Martial Escudero' },
-        { property: 'twitter:image', content: this.projet.Image[0].formats.small.url },
-      ]
     }
   },
   data: () => ({
