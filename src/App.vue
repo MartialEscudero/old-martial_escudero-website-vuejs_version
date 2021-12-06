@@ -75,11 +75,6 @@ require("./assets/js/app.js")
 import { mapActions } from 'vuex'
 
 export default {
-  metaInfo () {
-    return {
-      title : 'Martial Escudero | Étudiant - Développeur Web',
-    }
-  },
   data: () => ({
     date: null,
     select: 'base',
