@@ -282,7 +282,7 @@ export default {
     return {
       title : 'Mon CV | Martial Escudero',
       meta: [
-        { property: 'description', content: 'Mon CV - Martial Escudero 21 ans – Étudiant & Développeur Web' },
+        { vmid: 'description', property: 'description', content: 'Mon CV - Martial Escudero 21 ans – Étudiant & Développeur Web' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://www.martialescudero.com' },
         { property: 'og:title', content: 'Martial Escudero | Étudiant - Développeur Web'},

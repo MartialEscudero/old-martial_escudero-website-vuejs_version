@@ -30,7 +30,7 @@ export default {
     return {
       title : this.projet.Titre + ' | Martial Escudero',
       meta: [
-        { property: 'description', content: this.projet.Titre + ' - Martial Escudero' },
+        { vmid: 'description', property: 'description', content: this.projet.Titre + ' - Martial Escudero' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://www.martialescudero.com' },
         { property: 'og:title', content: this.projet.Titre + ' - Martial Escudero' },
