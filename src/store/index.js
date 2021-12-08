@@ -11,7 +11,8 @@ export default new Vuex.Store ({
   state: {
     projets: [],
     projet: [],
-    cv: [],
+    cvpdf: [],
+    cv: [],   
   },
   mutations: {
     setProjet(state, args) {
@@ -23,9 +24,12 @@ export default new Vuex.Store ({
         state.projet.Techno = state.projet.Techno.replace(',',' |')
       }
     },
+    setCvPDF(state, args) {
+      state.cvpdf = args[0]
+    },
     setCv(state, args) {
-        state.cv = args[0]
-      },
+      state.cv = args
+    },
   },
   actions: {
     getProjets({commit}) {
@@ -48,19 +52,29 @@ export default new Vuex.Store ({
         router.push({path: '/404'})
       })
     },
-    getCv({commit}) {
-        axios.get(strapi + 'links?_id_eq=617ab714fb54e100161dae31')
-        .then( (res) => {
-          commit('setCv', res.data)
-        })
-        .catch( (err) => {
+    getCvPDF({commit}) {
+      axios.get(strapi + 'links?_id_eq=617ab714fb54e100161dae31')
+      .then( (res) => {
+          commit('setCvPDF', res.data)
+      })
+      .catch( (err) => {
           console.log(err)
-        })
-      },
+      })
+    },
+    getCv({commit}) {
+      axios.get(strapi + 'types-cvs')
+      .then( (res) => {
+          commit('setCv', res.data)
+      })
+      .catch( (err) => {
+          console.log(err)
+      })
+    },
   },
   getters: {
     projets: state => state.projets,
     projet: state => state.projet,
-    cv: state => state.cv
+    cvpdf: state => state.cvpdf,
+    cv : state => state.cv
   }
 })
