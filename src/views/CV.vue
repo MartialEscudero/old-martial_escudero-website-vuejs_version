@@ -4,7 +4,7 @@
       CV
     </h1>
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="text-center text-4xl font-bold" data-aos="fade-right">Moi.</div>
+      <h1 class="text-center text-4xl font-bold" data-aos="fade-right">Moi.</h1>
       <div class="text-justify" data-aos="fade-left">
         <p>
           Actuellement en <a rel="noopener" target="_blank" href="https://www.sciences.unilim.fr/tic/metiers-de-linformatique-conduite-de-projet-technologie-du-developpement-web/">Licence Professionnelle - Métiers de l'informatique : Conduite de projet - Technologie du développement web</a> à l’Université de Limoges, je suis diplômé d'un <a rel="noopener" target="_blank" href="https://www.sciences.unilim.fr/tic/deust-webmaster-metiers-internet/">DEUST Webmaster & Métiers de l'Internet</a>.<br>
@@ -17,7 +17,7 @@
           Étudiant investie et dynamique, je possède une très bonne connaissance du monde du web et des nouvelles technologies.
         </p>
         <div id="wrapper">
-          <a class="rounded-full" rel="noopener" target="_blank" :href="cv.link">
+          <a class="rounded-full" rel="noopener" target="_blank" :href="cvpdf.link">
             <button class="btn bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center">
               <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
               <span>Télécharger mon CV</span>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="text-center text-4xl font-bold" data-aos="fade-right">Diplôme.</div>
+      <h1 class="text-center text-4xl font-bold" data-aos="fade-right">Diplôme.</h1>
       <div class="text-justify" data-aos="fade-left">
         <article>
           <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Université de Limoges, Faculté Sciences Et Techniques</span> | Licence Pro</p>
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="text-center text-4xl font-bold" data-aos="fade-right">Expériences.</div>
+      <h1 class="text-center text-4xl font-bold" data-aos="fade-right">Expériences.</h1>
       <div class="text-justify" data-aos="fade-left">
         <article>
           <p class="xl:text-xl sm:text-lg text-left"><span class="font-bold">Site Web Personnel V2</span> | Cadre Personnel</p>
@@ -114,124 +114,32 @@
       </div>
     </div>
     <div class="container mx-auto grid xl:grid-cols-2 sm:grid-cols-1 gap-x-0 gap-y-20 mt-32 xl:mb-10">
-      <div class="text-center text-4xl font-bold" data-aos="fade-right">Compétences.</div>
-      <div data-aos="fade-left">
-        <article class="text-justify">
-          <h1 class="text-left font-bold text-2xl">Languages</h1>
-          <hr class="my-6">
-          <section v-for="language in languages" :key="language.item">
-            <div class="relative pt-1">
-              <div class="flex mb-2 items-center justify-between">
-                <div>
-                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                    {{language.name}}
-                  </span>
+      <h1 class="text-center text-4xl font-bold" data-aos="fade-right">Compétences.</h1>
+        <div data-aos="fade-left">
+          <article class="text-justify" v-for="type in cv" :key="type.item">
+            <h2 class="text-left font-bold text-2xl">{{type.type}}</h2>
+            <hr class="my-6">
+            <section v-for="cv in type.cvs" :key="cv.item">
+              <div class="relative pt-1">
+                <div class="flex mb-2 items-center justify-between">
+                  <div>
+                    <span class="text-xs font-semibold inline-block py-1 rounded-full">
+                      {{cv.name}}
+                    </span>
+                  </div>
+                  <div class="text-right">
+                    <span class="text-xs font-semibold inline-block">
+                      {{cv.percent}}%
+                    </span>
+                  </div>
                 </div>
-                <div class="text-right">
-                  <span class="text-xs font-semibold inline-block">
-                    {{language.pourcent}}%
-                  </span>
-                </div>
-              </div>
-              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-                <div :style="'width:'+language.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
-              </div>
-            </div>
-          </section>
-        </article>
-        <article class="text-justify mt-10">
-          <h1 class="text-left font-bold text-2xl">Framework</h1>
-          <hr class="my-6">
-          <section v-for="framework in frameworks" :key="framework.item">
-            <div class="relative pt-1">
-              <div class="flex mb-2 items-center justify-between">
-                <div>
-                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                    {{framework.name}}
-                  </span>
-                </div>
-                <div class="text-right">
-                  <span class="text-xs font-semibold inline-block">
-                    {{framework.pourcent}}%
-                  </span>
+                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
+                  <div :style="'width:'+cv.percent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
                 </div>
               </div>
-              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-                <div :style="'width:'+framework.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
-              </div>
-            </div>
-          </section>
-        </article>
-        <article class="text-justify mt-10">
-          <h1 class="text-left font-bold text-2xl">CMS</h1>
-          <hr class="my-6">
-          <section v-for="cms in cmss" :key="cms.item">
-            <div class="relative pt-1">
-              <div class="flex mb-2 items-center justify-between">
-                <div>
-                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                    {{cms.name}}
-                  </span>
-                </div>
-                <div class="text-right">
-                  <span class="text-xs font-semibold inline-block">
-                    {{cms.pourcent}}%
-                  </span>
-                </div>
-              </div>
-              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-                <div :style="'width:'+cms.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
-              </div>
-            </div>
-          </section>
-        </article>
-        <article class="text-justify mt-10">
-          <h1 class="text-left font-bold text-2xl">Autres</h1>
-          <hr class="my-6">
-          <section v-for="autre in autres" :key="autre.item">
-            <div class="relative pt-1">
-              <div class="flex mb-2 items-center justify-between">
-                <div>
-                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                    {{autre.name}}
-                  </span>
-                </div>
-                <div class="text-right">
-                  <span class="text-xs font-semibold inline-block">
-                    {{autre.pourcent}}%
-                  </span>
-                </div>
-              </div>
-              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-                <div :style="'width:'+autre.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
-              </div>
-            </div>
-          </section>
-        </article>
-        <article class="text-justify mt-10">
-          <h1 class="text-left font-bold text-2xl">Design</h1>
-          <hr class="my-6">
-          <section v-for="design in designs" :key="design.item">
-            <div class="relative pt-1">
-              <div class="flex mb-2 items-center justify-between">
-                <div>
-                  <span class="text-xs font-semibold inline-block py-1 rounded-full">
-                    {{design.name}}
-                  </span>
-                </div>
-                <div class="text-right">
-                  <span class="text-xs font-semibold inline-block">
-                    {{design.pourcent}}%
-                  </span>
-                </div>
-              </div>
-              <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-300">
-                <div :style="'width:'+design.pourcent+'%'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
-              </div>
-            </div>
-          </section>
-        </article>
-      </div>
+            </section>
+          </article>
+        </div>
     </div>
   </div>
 </template>
@@ -239,43 +147,9 @@
 <script>
 import { mapGetters } from 'vuex'
 export default {
-  data: () => ({
-    languages: [
-      {name: "HTML", pourcent: 99 },
-      {name: "CSS", pourcent: 85 },
-      {name: "JavaScript", pourcent: 70 },
-      {name: "jQuery", pourcent: 70 },
-      {name: "Ajax", pourcent: 60 },
-      {name: "PHP", pourcent: 60 },
-      {name: "MySQL / PhpMyAdmin", pourcent: 50 },
-    ],
-    frameworks: [
-      {name: "Vue.js", pourcent: 70 },
-      {name: "Alpine.js", pourcent: 60 },
-      {name: "Vuetify", pourcent: 90 },
-      {name: "Tailwind CSS", pourcent: 90 },
-      {name: "Bootstrap", pourcent: 90 },
-    ],
-    cmss: [
-      {name: "WordPress", pourcent: 85 },
-      {name: "Strapi", pourcent: 85 },
-    ],
-    autres: [
-      {name: "Vercel", pourcent: 85 },
-      {name: "Netlify", pourcent: 75 },
-      {name: "Vitejs", pourcent: 75 },
-      {name: "Vue CLI", pourcent: 75 },
-      
-    ],
-    designs: [
-      {name: "Adobe Premiere Pro", pourcent: 85 },
-      {name: "Figma", pourcent: 85 },
-      {name: "Adobe Photoshop", pourcent: 80 },
-      {name: "Adobe InDesign", pourcent: 80 },
-      {name: "Adobe XD", pourcent: 80 },
-    ]
-  }),
+  data: () => ({}),
   computed: {
+    ...mapGetters(['cvpdf']),
     ...mapGetters(['cv']),
   }, 
   metaInfo () {
